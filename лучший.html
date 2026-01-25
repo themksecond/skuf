@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<style> 
+    .skuf {  
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        max-width: 90%;
+        max-height: 90vh;
+        width: 320px;
+        height: 430px;
+    } 
+
+    .leaderboard {  
+            position: fixed;
+            top: -5%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 300px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+        } 
+
+        .leaderboard_text {  
+            position: absolute;
+            top: 49%; /* процент от высоты контейнера */
+            left: 50%;
+            transform: translateX(-50%);
+            color: black; /* или любой другой цвет */
+            font-size: 18px; /* адаптивный размер шрифта */
+            font-weight: bold;
+            text-align: center;
+            /* z-index: 10; */
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
+            width: 80%; /* ограничение ширины текста */
+            white-space: nowrap; /* текст в одну строку */
+        } 
+
+    .tasks {  
+            position: fixed;
+            top: 7.5%;
+            left: 125px;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 300px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+        } 
+
+        .tasks img {
+            width: 300px;
+            height: 300px;
+            object-fit: contain; /* сохраняет пропорции картинки */
+        }
+
+
+        .tasks_text {  
+            position: absolute;
+            top: 45%; /* процент от высоты контейнера */
+            left: 45%;
+            transform: translateX(-50%);
+            color: black; /* или любой другой цвет */
+            font-size: 18px; /* адаптивный размер шрифта */
+            font-weight: bold;
+            text-align: center;
+            /* z-index: 10; */
+            width: 80%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
+            white-space: nowrap; /* текст в одну строку */
+        } 
+
+    .skins {  
+            position: fixed;
+            top: 17.5%;
+            left: 125px;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 300px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+        } 
+
+        .skins img {
+            width: 300px;
+            height: 300px;
+            object-fit: contain; /* сохраняет пропорции картинки */
+        }
+
+
+        .skins_text {  
+            position: absolute;
+            top: 45%; /* процент от высоты контейнера */
+            left: 45%;
+            transform: translateX(-50%);
+            color: black; /* или любой другой цвет */
+            font-size: 18px; /* адаптивный размер шрифта */
+            font-weight: bold;
+            text-align: center;
+            /* z-index: 10; */
+            width: 80%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
+            white-space: nowrap; /* текст в одну строку */
+        } 
+
+    .balance {  
+            position: fixed;
+            top: 7.5%;
+            right: -175px;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 300px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+        } 
+
+        .balance img {
+            width: 300px;
+            height: 300px;
+            object-fit: contain; /* сохраняет пропорции картинки */
+        }
+
+
+        .balance_text {  
+            position: absolute;
+            top: 44%; /* процент от высоты контейнера */
+            right: -17.5%;
+            transform: translateX(-50%);
+            color: black; /* или любой другой цвет */
+            font-size: 2.5vh; /* адаптивный размер шрифта */
+            font-weight: bold;
+            text-align: center;
+            /* z-index: 10; */
+            width: 80%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
+            white-space: nowrap; /* текст в одну строку */
+        } 
+
+    .shop {  
+            position: fixed;
+            top: 17.5%;
+            right: -175px;
+            transform: translateX(-50%);
+            width: 300px;
+            height: 300px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+        } 
+
+        .shop img {
+            width: 300px;
+            height: 300px;
+            object-fit: contain; /* сохраняет пропорции картинки */
+        }
+
+
+        .shop_text {  
+            position: absolute;
+            top: 45%; /* процент от высоты контейнера */
+            right: -17.5%;
+            transform: translateX(-50%);
+            color: black; /* или любой другой цвет */
+            font-size: 2.5vh; /* адаптивный размер шрифта */
+            font-weight: bold;
+            text-align: center;
+            /* z-index: 10; */
+            width: 80%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
+            white-space: nowrap; /* текст в одну строку */
+        } 
+
+    .bottles {  
+            position: fixed;
+            bottom: -5%;
+            right: -325px;
+            transform: translateX(-50%);
+            width: 400px;
+            height: 400px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+        } 
+
+        .bottles img {
+            width: 400px;
+            height: 400px;
+            object-fit: contain; /* сохраняет пропорции картинки */
+        }
+
+
+        .bottles_text {  
+            position: absolute;
+            bottom: 45%; /* процент от высоты контейнера */
+            right: -17.5%;
+            transform: translateX(-50%);
+            color: black; /* или любой другой цвет */
+            font-size: 3vh; /* адаптивный размер шрифта */
+            font-weight: bold;
+            text-align: center;
+            /* z-index: 10; */
+            width: 80%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
+            white-space: nowrap; /* текст в одну строку */
+        } 
+
+    .spin {  
+            position: fixed;
+            bottom: 5%;
+            left: 125px;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 200px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+        } 
+
+        .spin img {
+            width: 200px;
+            height: 200px;
+            object-fit: contain; /* сохраняет пропорции картинки */
+        }
+
+
+        .spin_text {  
+            position: absolute;
+            bottom: 45%; /* процент от высоты контейнера */
+            right: -17.5%;
+            transform: translateX(-50%);
+            color: black; /* или любой другой цвет */
+            font-size: 2.5vh; /* адаптивный размер шрифта */
+            font-weight: bold;
+            text-align: center;
+            /* z-index: 10; */
+            width: 80%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
+            white-space: nowrap; /* текст в одну строку */
+        } 
+
+    body  {
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background: url(images/комната.png) no-repeat;
+        background-size: 100% 100%; /* растягивает по ширине и высоте */
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+</style>
+<body>
+    
+    <div class="leaderboard">
+        <img style="max-width: 600px; max-height: 300px;" src=".\images\ЛИДЕРБОРД.png">
+        <font class="leaderboard_text">НАИСКУФЕЙШИЕ</font>
+    </div>
+
+    <div class="tasks">
+        <img src=".\images\задания.png">
+        <font class="tasks_text">ЗАДАНИЯ</font>
+    </div>
+    <div class="skins">
+        <img src=".\images\задания.png">
+        <font class="skins_text">СКУФЫ</font>
+    </div>
+
+    <div class="balance">
+        <img src=".\images\пивбар.png">
+        <font class="balance_text">100000</font>
+    </div>
+
+    <div class="shop">
+        <img src=".\images\магазик.png">
+        <font class="shop_text"></font>
+    </div>
+
+    <div class="bottles">
+        <img src=".\images\бутылки.png">
+        <font class="bottles_text"></font>
+    </div>
+
+    <div class="spin">
+        <img src=".\images\колесо.png">
+        <font class="spin_text"></font>
+    </div>
+    
+    
+    <img class="skuf" src=".\images\скуф.png"> 
+
+
+    <!-- <img src=".\images\кнопка.png" width=1500 height=1500 style="margin-left: -0px; margin-top: 480px;"> -->
+</body>
+</html>

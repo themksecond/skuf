@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<style> 
+    img {  
+    max-width: 100%; 
+    max-height: 100%; 
+    display: block;
+    } 
+</style>
+<body style="margun: 0;">
+<img src=".\images\комната.png"
+     style="width: 100vw; height: 100vh; object-fit: cover:">
+<div style="margin-left: 2225px; margin-top: -2650px;">  
+<img src=".\images\скуф.png" width=2000 height=2500>
+<div style="margin-left: -780px; margin-top: -3600px;">  
+<img src=".\images\ЛИДЕРБОРД.png" width=3800 height=1750>
+<div style="margin-left: -1600px; margin-top: -1580px;">  
+<img src=".\images\задания.png" width=1500 height=1500
+ div style="margin-left: -0px; margin-top: 480px;">  
+<img src=".\images\кнопка.png" width=1500 height=1500
+ style="margin-left: -0px; margin-top: 480px;">
+</body>
+</html>
