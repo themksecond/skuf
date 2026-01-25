@@ -4,7 +4,7 @@
     .skuf {  
         position: absolute;
         top: 50%;
-        left: 50%;
+        left: 49%;
         transform: translate(-50%, -50%);
         max-width: 90%;
         max-height: 90vh;
@@ -14,10 +14,10 @@
 
     .leaderboard {  
             position: fixed;
-            top: -10%;
+            top: -5%;
             left: 50%;
             transform: translateX(-50%);
-            width: 600px;
+            width: 500px;
             height: 300px;
             /* display: flex; */
             justify-content: center;
@@ -26,11 +26,11 @@
 
         .leaderboard_text {  
             position: absolute;
-            top: 49%; /* процент от высоты контейнера */
+            top: 40%; /* процент от высоты контейнера */
             left: 50%;
             transform: translateX(-50%);
             color: black; /* или любой другой цвет */
-            font-size: 18px; /* адаптивный размер шрифта */
+            font-size: 16px; /* адаптивный размер шрифта */
             font-weight: bold;
             text-align: center;
             /* z-index: 10; */
@@ -175,26 +175,26 @@
             white-space: nowrap; /* текст в одну строку */
         } 
 
-    .bottles {  
+    .spin {  
             position: fixed;
-            bottom: 0%;
-            right: -125px;
+            bottom: 5%;
+            right: -50px;
             transform: translateX(-50%);
-            width: 200px;
-            height: 200px;
+            width: 125px;
+            height: 125px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
         } 
 
-        .bottles img {
-            width: 200px;
-            height: 200px;
+        .spin img {
+            width: 125px;
+            height: 125px;
             object-fit: contain; /* сохраняет пропорции картинки */
         }
 
 
-        .bottles_text {  
+        .spin_text {  
             position: absolute;
             bottom: 45%; /* процент от высоты контейнера */
             right: -17.5%;
@@ -209,26 +209,26 @@
             white-space: nowrap; /* текст в одну строку */
         } 
 
-    .spin {  
+    .bottles {  
             position: fixed;
-            bottom: 5%;
+            bottom: -2.5%;
             left: 100px;
             transform: translateX(-50%);
-            width: 100px;
-            height: 100px;
+            width: 300px;
+            height: 300px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
         } 
 
-        .spin img {
-            width: 100px;
-            height: 100px;
+        .bottles img {
+            width: 300px;
+            height:3 30px;
             object-fit: contain; /* сохраняет пропорции картинки */
         }
 
 
-        .spin_text {  
+        .bottles_text {  
             position: absolute;
             bottom: 45%; /* процент от высоты контейнера */
             right: -17.5%;
@@ -258,7 +258,7 @@
 <body>
     
     <div class="leaderboard">
-        <img style="max-width: 600px; max-height: 300px;" src=".\images\ЛИДЕРБОРД.png">
+        <img style="max-width: 500px; max-height: 300px;" src=".\images\ЛИДЕРБОРД.png">
         <font class="leaderboard_text">НАИСКУФЕЙШИЕ</font>
     </div>
 
