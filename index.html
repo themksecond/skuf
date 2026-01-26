@@ -12,28 +12,39 @@
         height: 370px;
         cursor: pointer;
         transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -webkit-tap-highlight-color: transparent;
     } 
 
     .skuf:active {
             transform: translate(-50%, -55%) scale(0.8);
+            -webkit-tap-highlight-color: transparent;
     }
 
     .leaderboard {  
             position: fixed;
-            top: -7.5%;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 500px;
-            height: 300px;
+            top: 0%;
+            left: 30%;
+            transform: translateX(-50% -50%);
+            width: 225px;
+            height: 100px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
+            -webkit-tap-highlight-color: transparent;
         } 
+
+        .leaderboard img {
+            width: 225px;; 
+            height: 100px;
+            transform: scale(3);
+            pointer-events: none;
+
+        }
 
         .leaderboard_text {  
             position: absolute;
-            top: 39%; /* процент от высоты контейнера */
-            left: 50%;
+            top: 40%; /* процент от высоты контейнера */
+            left: 48%;
             transform: translateX(-50%);
             color: black; /* или любой другой цвет */
             font-size: 24px; /* адаптивный размер шрифта */
@@ -57,6 +68,7 @@
             align-items: center;
             cursor: pointer;
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -webkit-tap-highlight-color: transparent;
         } 
 
         .tasks img {
@@ -85,7 +97,7 @@
 
     .skins {  
             position: fixed;
-            top: 25%;
+            top: 22.5%;
             left: 100px;
             transform: translateX(-50%);
             width: 225px;
@@ -95,6 +107,7 @@
             align-items: center;
             cursor: pointer;
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -webkit-tap-highlight-color: transparent;
         } 
 
         .skins img {
@@ -133,6 +146,7 @@
             align-items: center;
             cursor: pointer;
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -webkit-tap-highlight-color: transparent;
         } 
 
         .balance img {
@@ -140,6 +154,8 @@
             height: 75px;
             transform: scale(3);
             object-fit: contain; /* сохраняет пропорции картинки */
+            pointer-events: none;
+
         }
 
 
@@ -160,7 +176,7 @@
 
     .shop {  
             position: fixed;
-            top: 25%;
+            top: 22.5%;
             right: -200px;
             transform: translateX(-50%);
             width: 225px;
@@ -170,6 +186,7 @@
             align-items: center;
             cursor: pointer;
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -webkit-tap-highlight-color: transparent;
         } 
 
         .shop:active {
@@ -211,6 +228,7 @@
             align-items: center;
             cursor: pointer;
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -webkit-tap-highlight-color: transparent;
         } 
 
         .spin img {
@@ -251,6 +269,7 @@
             align-items: center;
             cursor: pointer;
             transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -webkit-tap-highlight-color: transparent;
         } 
 
         .bottles img {
@@ -408,7 +427,7 @@
 <body>
     
     <div class="leaderboard">
-        <img style="max-width: 500px; max-height: 300px;" src=".\images\ЛИДЕРБОРД.png">
+        <img src=".\images\ЛИДЕРБОРД.png">
         <font class="leaderboard_text">#120</font>
     </div>
 
