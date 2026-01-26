@@ -10,7 +10,13 @@
         max-height: 90vh;
         width: 270px;
         height: 370px;
+        cursor: pointer;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     } 
+
+    .skuf:active {
+            transform: translate(-50%, -55%) scale(0.5);
+        }
 
     .leaderboard {  
             position: fixed;
@@ -42,18 +48,18 @@
     .tasks {  
             position: fixed;
             top: 7.5%;
-            left: 75px;
+            left: 100px;
             transform: translateX(-50%);
-            width: 150px;
-            height: 150px;
+            width: 225px;
+            height: 225px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
         } 
 
         .tasks img {
-            width: 150px;
-            height: 150px;
+            width: 225px;
+            height: 225px;
             object-fit: contain; /* сохраняет пропорции картинки */
         }
 
@@ -75,19 +81,19 @@
 
     .skins {  
             position: fixed;
-            top: 17.5%;
-            left: 75px;
+            top: 15%;
+            left: 100px;
             transform: translateX(-50%);
-            width: 150px;
-            height: 150px;
+            width: 225px;
+            height: 225px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
         } 
 
         .skins img {
-            width: 150px;
-            height: 150px;
+            width: 225px;
+            height: 225px;
             object-fit: contain; /* сохраняет пропорции картинки */
         }
 
@@ -109,26 +115,26 @@
 
     .balance {  
             position: fixed;
-            top: 7.5%;
-            right: -75px;
+            top: 10%;
+            right: -100px;
             transform: translateX(-50%);
-            width: 150px;
-            height: 150px;
+            width: 175px;
+            height: 175px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
         } 
 
         .balance img {
-            width: 150px;
-            height: 150px;
+            width: 175px;
+            height: 175px;
             object-fit: contain; /* сохраняет пропорции картинки */
         }
 
 
         .balance_text {  
             position: absolute;
-            top: 44%; /* процент от высоты контейнера */
+            top: 42%; /* процент от высоты контейнера */
             right: -17.5%;
             transform: translateX(-50%);
             color: black; /* или любой другой цвет */
@@ -143,19 +149,19 @@
 
     .shop {  
             position: fixed;
-            top: 12.5%;
-            right: -125px;
+            top: 13.5%;
+            right: -150px;
             transform: translateX(-50%);
-            width: 200px;
-            height: 200px;
+            width: 225px;
+            height: 225px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
         } 
 
         .shop img {
-            width: 200px;
-            height: 200px;
+            width: 225px;
+            height: 225px;
             object-fit: contain; /* сохраняет пропорции картинки */
         }
 
@@ -273,7 +279,7 @@
 
     <div class="balance">
         <img src=".\images\пивбар.png">
-        <font class="balance_text">100000</font>
+        <font class="balance_text" id="balance">100000</font>
     </div>
 
     <div class="shop">
@@ -292,9 +298,33 @@
     </div>
     
     
-    <img class="skuf" src=".\images\скуф.png"> 
+    <img class="skuf" src=".\images\скуф.png" onclick="Click()"> 
 
 
     <!-- <img src=".\images\кнопка.png" width=1500 height=1500 style="margin-left: -0px; margin-top: 480px;"> -->
 </body>
+<script>
+    // localStorage.clear()
+    test_coin = Number(localStorage.getItem('test_coin'));
+    document.getElementById("balance").textContent = Number(test_coin);
+
+
+    // if(localStorage.getItem('test_coin') == 0)
+    // {
+    //     test_coin = 0;
+    // }
+    // else{
+    //     test_coin = localStorage.getItem('test_coin');
+    // }
+
+
+    function Click(){
+        test_coin = test_coin + 1;
+        console.log("+1")
+        console.log(test_coin)
+        localStorage.setItem('test_coin', test_coin);
+        document.getElementById("balance").textContent = Number(test_coin);
+    }
+
+</script>
 </html>
