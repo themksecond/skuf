@@ -14,17 +14,22 @@
         box-sizing: border-box;
     }
 
+    /*Убрать полосу прокрутки у элемента*/
+    *::-webkit-scrollbar {
+        width: 0;
+    }
+
 
 
     .skuf {  
         position: absolute;
         top: 53%;
-        left: 49%;
+        left: 39%;
         transform: translate(-50%, -50%);
         max-width: 90%;
         max-height: 90dvh;
-        width: 270px;
-        height: 370px;
+        width: 170px;
+        height: 220px;
         cursor: pointer;
         transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         -webkit-tap-highlight-color: transparent;
@@ -35,48 +40,138 @@
             -webkit-tap-highlight-color: transparent;
     }
 
-    .leaderboard {  
-            position: fixed;
-            top: -7.5%;
-            left: 50%;
+    .profile {  
+            position: relative;
+            top: -35%;
+            right: -47.5%;
             transform: translateX(-50%);
-            width: 500px;
-            height: 250px;
+            width: 250px;
+            height: 90px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
             -webkit-tap-highlight-color: transparent;
             pointer-events: none;
+            background-color: #272727;
+            border-radius: 15px;
         } 
 
-        .leaderboard img {
-            width: 500px;
-            height: 250px;
+        .profile #actual_balance_div {
+            position: absolute;
+            width: 165px;
+            height: 45px;
+            pointer-events: none;
+            /* background-color: #393b39; */
+            /* border-radius: 10px 0px 10px 0px; */
+            }
+            .profile #actual_balance_div .firstimg {
+            position: absolute;
+            top: -20px;
+            left: -40px;
+            width: 165px;
+            height: 85px;
+            pointer-events: none;
+            }
+            .profile #actual_balance_div .secondimg {
+            position: absolute;
+            top: -20px;
+            left: 40px;
+            width: 165px;
+            height: 85px;
             pointer-events: none;
         }
 
-        .leaderboard_text {  
+
+        .fish_balance_text {  
             position: absolute;
-            top: 46%; /* процент от высоты контейнера */
-            left: 49%;
+            top: 35%; /* процент от высоты контейнера */
+            right: -53%;
             transform: translateX(-50%);
             color: black; /* или любой другой цвет */
-            font-size: 24px; /* адаптивный размер шрифта */
+            font-size: 14px; /* адаптивный размер шрифта */
             font-weight: bold;
             text-align: center;
             /* z-index: 10; */
+            width: 80%;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
-            width: 80%; /* ограничение ширины текста */
             white-space: nowrap; /* текст в одну строку */
         } 
 
+        .beer_balance_text {  
+            position: absolute;
+            top: 35%; /* процент от высоты контейнера */
+            right: -6%;
+            transform: translateX(-50%);
+            color: black; /* или любой другой цвет */
+            font-size: 14px; /* адаптивный размер шрифта */
+            font-weight: bold;
+            text-align: center;
+            /* z-index: 10; */
+            width: 80%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
+            white-space: nowrap; /* текст в одну строку */
+        } 
+
+        .profile #passive_balance_div {
+            position: absolute;
+            top: 50%;
+            width: 165px;
+            height: 45px;
+            pointer-events: none;
+            /* background-color: #393b39; */
+            /* border-radius: 0px 10px 0px 10px; */
+            }
+            .profile #passive_balance_div .firstimg {
+            position: absolute;
+            top: -45px;
+            left: -40px;
+            width: 250px;
+            height: 120px;
+            pointer-events: none;
+        }
+
+        .passive_balance_text {  
+            position: absolute;
+            top: 20%; /* процент от высоты контейнера */
+            right: -30%;
+            transform: translateX(-50%);
+            color: black; /* или любой другой цвет */
+            font-size: 14px; /* адаптивный размер шрифта */
+            font-weight: bold;
+            text-align: center;
+            /* z-index: 10; */
+            width: 80%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
+            white-space: nowrap; /* текст в одну строку */
+        } 
+
+        .profile #profile_img {
+            position: absolute;
+            top: 0%;
+            right: 0%;
+            width: 85px;
+            height: 90px;
+            pointer-events: none;
+            /* background-color: #393b39; */
+            /* border-radius: 0px 10px 10px 0px; */
+
+            }
+            .profile #profile_img .firstimg {
+            position: absolute;
+            top: 7.5px;
+            left: 5px;
+            width: 70px;
+            height: 70px;
+            pointer-events: none;
+    }
+
     .tasks {  
             position: fixed;
-            top: 15%;
-            left: 85px;
+            bottom: 12%;
+            left: 65px;
             transform: translateX(-50%);
-            width: 225px;
-            height: 75px;
+            width: 100px;
+            height: 100px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
@@ -86,15 +181,54 @@
         } 
 
         .tasks img {
-            width: 225px;
-            height: 75px;
-            transform: scale(3);
-            object-fit: contain; /* сохраняет пропорции картинки */
+            width: 100px;
+            height: 100px;
+            transform: scale(3.5);
+            /* object-fit: contain; сохраняет пропорции картинки */
             pointer-events: none;
         }
 
 
         .tasks_text {  
+            position: absolute;
+            top: 35%; /* процент от высоты контейнера */
+            left: 45%;
+            transform: translateX(-50%);
+            color: black; /* или любой другой цвет */
+            font-size: 12px; /* адаптивный размер шрифта */
+            font-weight: bold;
+            text-align: center;
+            /* z-index: 10; */
+            width: 80%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
+            white-space: nowrap; /* текст в одну строку */
+        } 
+
+    .settings {  
+            position: fixed;
+            top: 3%;
+            left: 50px;
+            transform: translateX(-50%);
+            width: 75px;
+            height: 75px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -webkit-tap-highlight-color: transparent;
+        } 
+
+        .settings img {
+            width: 75px;
+            height: 75px;
+            transform: scale(3);
+            /* object-fit: contain; сохраняет пропорции картинки */
+            pointer-events: none;
+        }
+
+
+        .settings_text {  
             position: absolute;
             top: 35%; /* процент от высоты контейнера */
             left: 45%;
@@ -148,13 +282,13 @@
             white-space: nowrap; /* текст в одну строку */
         } 
 
-    .balance {  
+    .leaderboard {  
             position: fixed;
-            top: 15%;
-            right: -115px;
+            top: 13.5%;
+            right: -92.5px;
             transform: translateX(-50%);
-            width: 200px;
-            height: 75px;
+            width: 175px;
+            height: 65px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
@@ -163,23 +297,21 @@
             -webkit-tap-highlight-color: transparent;
         } 
 
-        .balance img {
-            width: 200px;
-            height: 75px;
+        .leaderboard img {
+            width: 175px;
+            height: 65px;
             transform: scale(3);
             object-fit: contain; /* сохраняет пропорции картинки */
             pointer-events: none;
-
         }
 
-
-        .balance_text {  
+        .leaderboard_text {  
             position: absolute;
-            top: 30%; /* процент от высоты контейнера */
-            right: -17.5%;
+            top: 27.5%; /* процент от высоты контейнера */
+            left: 37.5%;
             transform: translateX(-50%);
             color: black; /* или любой другой цвет */
-            font-size: 18px; /* адаптивный размер шрифта */
+            font-size: 20px; /* адаптивный размер шрифта */
             font-weight: bold;
             text-align: center;
             /* z-index: 10; */
@@ -190,8 +322,8 @@
 
     .shop {  
             position: fixed;
-            top: 22.5%;
-            right: -225px;
+            top: 20%;
+            right: -250px;
             transform: translateX(-50%);
             width: 225px;
             height: 225px;
@@ -212,6 +344,8 @@
             height: 75px;
             transform: scale(3);
             object-fit: contain; /* сохраняет пропорции картинки */
+            pointer-events: none;
+
         }
 
 
@@ -232,11 +366,11 @@
 
     .spin {  
             position: fixed;
-            bottom: 5%;
-            right: -50px;
+            bottom: 12%;
+            right: -30px;
             transform: translateX(-50%);
-            width: 125px;
-            height: 125px;
+            width: 100px;
+            height: 100px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
@@ -246,8 +380,8 @@
         } 
 
         .spin img {
-            width: 125px;
-            height: 125px;
+            width: 100px;
+            height: 100px;
             object-fit: contain; /* сохраняет пропорции картинки */
         }
 
@@ -273,8 +407,8 @@
 
     .bottles {  
             position: fixed;
-            bottom: -2.5%;
-            left: 100px;
+            bottom: 4%;
+            left: 90px;
             transform: translateX(-50%);
             width: 300px;
             height: 300px;
@@ -437,37 +571,125 @@
             max-width: 70%;
         }
 
+    .bottom {  
+        position: relative;
+        bottom: -40%;
+        right: -50%;
+        transform: translateX(-50%);
+        width: 102%;
+        height: 110px;
+        /* justify-content: center;
+        align-items: center; */
+        -webkit-tap-highlight-color: transparent;
+        /* pointer-events: none; */
+        background-color: #272727;
+    } 
+    
+    .A {
+        position: absolute;
+        /* background-color: #272727; Фон красим фиолетовым */
+        text-align: center;
+        cursor: pointer;
+        width: 25%;
+        height: 75%;
+        top: 10px;
+        left: 0%;
+        z-index: 20;
+    }
+
+    .B {
+        position: absolute;
+        /* background-color: #272727; Фон красим фиолетовым */
+        text-align: center;
+        cursor: pointer;
+        width: 25%;
+        height: 75%;
+        top: 10px;
+        left: 25%;
+        z-index: 20;
+
+    }
+
+    .C {
+        position: absolute;
+        /* background-color: #272727; Фон красим фиолетовым */
+        text-align: center;
+        cursor: pointer;
+        width: 25%;
+        height: 75%;
+        top: 10px;
+        left: 50%;
+        z-index: 20;
+
+    }
+
+    .D {
+        position: absolute;
+        /* background-color: #272727; Фон красим фиолетовым */
+        text-align: center;
+        cursor: pointer;
+        width: 25%;
+        height: 75%;
+        top: 10px;
+        left: 75%;
+        z-index: 20;
+
+    }
+
+    .bottom div img {
+        width: 75px;
+        height: 75px;
+        transform: scale(3);
+        object-fit: contain; /* сохраняет пропорции картинки */
+        pointer-events: none;
+    }
+
 </style>
 <body>
     
-    <div class="leaderboard">
-        <img src=".\images\ЛИДЕРБОРД.png">
-        <font class="leaderboard_text" id="balance">#125</font>
+    <div class="profile">
+        <div id="actual_balance_div">
+            <img src=".\images\ЛИДЕРБОРД.png" class="firstimg">
+            <font class="beer_balance_text" id="beer_balance">265</font>
+
+            <img src=".\images\ЛИДЕРБОРД.png" class="secondimg">
+            <font class="fish_balance_text" id="fish_balance">265</font>
+        </div>
+
+        <div id="passive_balance_div">
+            <img src=".\images\ЛИДЕРБОРД.png" class="firstimg">
+            <font class="passive_balance_text" id="passive_balance">245 бут/час</font>
+        </div>
+
+        <div id="profile_img">
+            <img src=".\images\profile.png" class="firstimg">
+            <!-- <font class="passive_balance_text" id="passive_balance">245 бут/час</font> -->
+        </div>
     </div>
 
     <div class="tasks" id="tasks" onclick="ShowTasks()">
-        <img src=".\images\задания.png">
-        <font class="tasks_text">ЗАДАНИЯ</font>
+        <img src=".\images\магазик.png">
     </div>
-    <div class="skins" onclick="ShowSkins()">
+    
+    <!-- <div class="skins" onclick="ShowSkins()">
         <img src=".\images\задания.png">
         <font class="skins_text">СКУФЫ</font>
-    </div>
+    </div> -->
 
-    <div class="balance">
+    <div class="leaderboard">
         <img src=".\images\пивбар.png">
-        <font class="balance_text" id="lead">#125</font>
+        <font class="leaderboard_text" id="lead">#125</font>
     </div>
 
-    <div class="shop" onclick="ShowShop()">
+    <div class="settings" onclick="ShowShop()">
         <img src=".\images\магазик.png">
-        <font class="shop_text"></font>
+        <font class="settings_text"></font>
     </div>
 
-    <div class="bottles">
+    <!-- <div class="bottles">
         <img src=".\images\бутылки.png">
         <font class="bottles_text"></font>
-    </div>
+    </div> -->
 
     <div class="spin" onclick="ShowSpin()">
         <img src=".\images\колесо.png">
@@ -648,6 +870,17 @@
                 <button class="btn-spin">Испытать удачу</button>
             </div>
         </div>
+    </div>
+
+    <div class="shop" onclick="ShowShop()">
+        <img src=".\images\магазик.png">
+    </div>
+
+    <div class="bottom">
+        <div class="A" onclick="alert('test1')"><img src=".\images\магазик.png"></div>
+        <div class="B" onclick="alert('test2')"><img src=".\images\магазик.png"></div>
+        <div class="C" onclick="alert('test3')"><img src=".\images\магазик.png"></div>
+        <div class="D" onclick="alert('test4')"><img src=".\images\магазик.png"></div>
     </div>
 
 
