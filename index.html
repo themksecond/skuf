@@ -3,6 +3,9 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
         <link rel="stylesheet" href="spin.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 <style> 
     html {
@@ -12,6 +15,9 @@
 
     * {
         box-sizing: border-box;
+        font-family: "Neucha", cursive;
+        font-weight: 400;
+        font-style: normal;
     }
 
     /*Убрать полосу прокрутки у элемента*/
@@ -42,11 +48,11 @@
 
     .profile {  
             position: relative;
-            top: -35%;
-            right: -47.5%;
-            transform: translateX(-50%);
-            width: 250px;
-            height: 90px;
+            top: -42.5%;
+            right: 0%;
+            transform: translateX(0%);
+            width: 350px;
+            height: 65px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
@@ -66,29 +72,29 @@
             }
             .profile #actual_balance_div .firstimg {
             position: absolute;
-            top: -20px;
-            left: -40px;
-            width: 165px;
-            height: 85px;
+            top: -30px;
+            left: 100px;
+            width: 100px;
+            height: 100px;
             pointer-events: none;
             }
             .profile #actual_balance_div .secondimg {
             position: absolute;
-            top: -20px;
-            left: 40px;
-            width: 165px;
-            height: 85px;
+            top: -30px;
+            left: 185px;
+            width: 100px;
+            height: 100px;
             pointer-events: none;
         }
 
 
         .fish_balance_text {  
             position: absolute;
-            top: 35%; /* процент от высоты контейнера */
-            right: -53%;
+            top: 27.5%; /* процент от высоты контейнера */
+            left: 132.5%;
             transform: translateX(-50%);
-            color: black; /* или любой другой цвет */
-            font-size: 14px; /* адаптивный размер шрифта */
+            color: white; /* или любой другой цвет */
+            font-size: 12px; /* адаптивный размер шрифта */
             font-weight: bold;
             text-align: center;
             /* z-index: 10; */
@@ -99,11 +105,11 @@
 
         .beer_balance_text {  
             position: absolute;
-            top: 35%; /* процент от высоты контейнера */
-            right: -6%;
+            top: 27.5%; /* процент от высоты контейнера */
+            left: 80%;
             transform: translateX(-50%);
-            color: black; /* или любой другой цвет */
-            font-size: 14px; /* адаптивный размер шрифта */
+            color: white; /* или любой другой цвет */
+            font-size: 12px; /* адаптивный размер шрифта */
             font-weight: bold;
             text-align: center;
             /* z-index: 10; */
@@ -114,9 +120,9 @@
 
         .profile #passive_balance_div {
             position: absolute;
-            top: 50%;
-            width: 165px;
-            height: 45px;
+            top: 0%;
+            width: 100px;
+            height: 65px;
             pointer-events: none;
             /* background-color: #393b39; */
             /* border-radius: 0px 10px 0px 10px; */
@@ -124,19 +130,34 @@
             .profile #passive_balance_div .firstimg {
             position: absolute;
             top: -45px;
-            left: -40px;
-            width: 250px;
-            height: 120px;
+            left: 0px;
+            width: 120px;
+            height: 130px;
             pointer-events: none;
         }
 
         .passive_balance_text {  
             position: absolute;
-            top: 20%; /* процент от высоты контейнера */
-            right: -30%;
+            top: 17.5%; /* процент от высоты контейнера */
+            right: -25%;
             transform: translateX(-50%);
-            color: black; /* или любой другой цвет */
+            color: white; /* или любой другой цвет */
             font-size: 14px; /* адаптивный размер шрифта */
+            font-weight: bold;
+            text-align: center;
+            /* z-index: 10; */
+            width: 80%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
+            white-space: nowrap; /* текст в одну строку */
+        } 
+
+        .passive_balance_text_desc {  
+            position: absolute;
+            top: 55%; /* процент от высоты контейнера */
+            right: -27.5%;
+            transform: translateX(-50%);
+            color: white; /* или любой другой цвет */
+            font-size: 12px; /* адаптивный размер шрифта */
             font-weight: bold;
             text-align: center;
             /* z-index: 10; */
@@ -147,10 +168,10 @@
 
         .profile #profile_img {
             position: absolute;
-            top: 0%;
-            right: 0%;
-            width: 85px;
-            height: 90px;
+            top: -5%;
+            right: 5%;
+            width: 55px;
+            height: 55px;
             pointer-events: none;
             /* background-color: #393b39; */
             /* border-radius: 0px 10px 10px 0px; */
@@ -160,18 +181,18 @@
             position: absolute;
             top: 7.5px;
             left: 5px;
-            width: 70px;
-            height: 70px;
+            width: 55px;
+            height: 55px;
             pointer-events: none;
     }
 
     .tasks {  
             position: fixed;
-            bottom: 12%;
-            left: 65px;
+            bottom: 10%;
+            left: 75px;
             transform: translateX(-50%);
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 45px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
@@ -181,21 +202,21 @@
         } 
 
         .tasks img {
-            width: 100px;
-            height: 100px;
-            transform: scale(3.5);
-            /* object-fit: contain; сохраняет пропорции картинки */
+            width: 120px;
+            height: 45px;
+            transform: scale(4.75);
+            object-fit: contain;
             pointer-events: none;
         }
 
 
         .tasks_text {  
             position: absolute;
-            top: 35%; /* процент от высоты контейнера */
-            left: 45%;
+            top: 25%; /* процент от высоты контейнера */
+            left: 50%;
             transform: translateX(-50%);
-            color: black; /* или любой другой цвет */
-            font-size: 12px; /* адаптивный размер шрифта */
+            color: white; /* или любой другой цвет */
+            font-size: 16px; /* адаптивный размер шрифта */
             font-weight: bold;
             text-align: center;
             /* z-index: 10; */
@@ -203,6 +224,45 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
             white-space: nowrap; /* текст в одну строку */
         } 
+
+        .upgrade {  
+            position: fixed;
+            bottom: 2.5%;
+            left: 75px;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 45px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            -webkit-tap-highlight-color: transparent;
+        } 
+
+        .upgrade img {
+            width: 120px;
+            height: 45px;
+            transform: scale(4.75);
+            object-fit: contain; 
+            pointer-events: none;
+        }
+
+
+        .upgrade_text {  
+            position: absolute;
+            top: 32.5%; /* процент от высоты контейнера */
+            left: 51%;
+            transform: translateX(-50%);
+            color: white; /* или любой другой цвет */
+            font-size: 14px; /* адаптивный размер шрифта */
+            font-weight: bold;
+            text-align: center;
+            /* z-index: 10; */
+            width: 80%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
+            white-space: nowrap; /* текст в одну строку */
+    } 
 
     .settings {  
             position: fixed;
@@ -310,7 +370,7 @@
             top: 27.5%; /* процент от высоты контейнера */
             left: 37.5%;
             transform: translateX(-50%);
-            color: black; /* или любой другой цвет */
+            color: white; /* или любой другой цвет */
             font-size: 20px; /* адаптивный размер шрифта */
             font-weight: bold;
             text-align: center;
@@ -322,11 +382,11 @@
 
     .shop {  
             position: fixed;
-            top: 20%;
-            right: -250px;
+            top: 12.5%;
+            right: -30px;
             transform: translateX(-50%);
-            width: 225px;
-            height: 225px;
+            width: 75px;
+            height: 75px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
@@ -342,7 +402,7 @@
         .shop img {
             width: 75px;
             height: 75px;
-            transform: scale(3);
+            transform: scale(1.2);
             object-fit: contain; /* сохраняет пропорции картинки */
             pointer-events: none;
 
@@ -366,7 +426,7 @@
 
     .spin {  
             position: fixed;
-            bottom: 12%;
+            bottom: 5%;
             right: -30px;
             transform: translateX(-50%);
             width: 100px;
@@ -543,8 +603,8 @@
         }
         
         .item-number {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
             background: #4CAF50;
             color: white;
             border-radius: 50%;
@@ -556,109 +616,39 @@
         }
         
         .item-content {
-            flex: 1;
+            /* flex: 1; */
+            width: 200px;
         }
         
         .item-title {
             color: beige;
+            font-size: 12px;
             font-weight: bold;
             margin-bottom: 3px;
         }
         
         .item-description {
             color: #666;
-            font-size: 14px;
+            font-size: 10px;
             max-width: 70%;
         }
-
-    .bottom {  
-        position: relative;
-        bottom: -40%;
-        right: -50%;
-        transform: translateX(-50%);
-        width: 102%;
-        height: 110px;
-        /* justify-content: center;
-        align-items: center; */
-        -webkit-tap-highlight-color: transparent;
-        /* pointer-events: none; */
-        background-color: #272727;
-    } 
-    
-    .A {
-        position: absolute;
-        /* background-color: #272727; Фон красим фиолетовым */
-        text-align: center;
-        cursor: pointer;
-        width: 25%;
-        height: 75%;
-        top: 10px;
-        left: 0%;
-        z-index: 20;
-    }
-
-    .B {
-        position: absolute;
-        /* background-color: #272727; Фон красим фиолетовым */
-        text-align: center;
-        cursor: pointer;
-        width: 25%;
-        height: 75%;
-        top: 10px;
-        left: 25%;
-        z-index: 20;
-
-    }
-
-    .C {
-        position: absolute;
-        /* background-color: #272727; Фон красим фиолетовым */
-        text-align: center;
-        cursor: pointer;
-        width: 25%;
-        height: 75%;
-        top: 10px;
-        left: 50%;
-        z-index: 20;
-
-    }
-
-    .D {
-        position: absolute;
-        /* background-color: #272727; Фон красим фиолетовым */
-        text-align: center;
-        cursor: pointer;
-        width: 25%;
-        height: 75%;
-        top: 10px;
-        left: 75%;
-        z-index: 20;
-
-    }
-
-    .bottom div img {
-        width: 75px;
-        height: 75px;
-        transform: scale(3);
-        object-fit: contain; /* сохраняет пропорции картинки */
-        pointer-events: none;
-    }
 
 </style>
 <body>
     
     <div class="profile">
         <div id="actual_balance_div">
-            <img src=".\images\ЛИДЕРБОРД.png" class="firstimg">
+            <img src=".\images\счетчик.png" class="firstimg">
             <font class="beer_balance_text" id="beer_balance">265</font>
 
-            <img src=".\images\ЛИДЕРБОРД.png" class="secondimg">
+            <img src=".\images\счетчик_рыбы.png" class="secondimg">
             <font class="fish_balance_text" id="fish_balance">265</font>
         </div>
 
         <div id="passive_balance_div">
-            <img src=".\images\ЛИДЕРБОРД.png" class="firstimg">
-            <font class="passive_balance_text" id="passive_balance">245 бут/час</font>
+            <img src=".\images\счетчик_сек.png" class="firstimg">
+            <font class="passive_balance_text" id="passive_balance">245</font>
+            <font class="passive_balance_text_desc">бут/час</font>
         </div>
 
         <div id="profile_img">
@@ -668,7 +658,13 @@
     </div>
 
     <div class="tasks" id="tasks" onclick="ShowTasks()">
-        <img src=".\images\магазик.png">
+        <img src=".\images\дефолт.png">
+        <font class="tasks_text" id="beer_balance">ЗАДАНИЯ</font>
+    </div>
+
+    <div class="upgrade" id="upgrade" onclick="ShowUpgrade()">
+        <img src=".\images\дефолт.png">
+        <font class="upgrade_text">УЛУЧШЕНИЯ</font>
     </div>
     
     <!-- <div class="skins" onclick="ShowSkins()">
@@ -676,15 +672,15 @@
         <font class="skins_text">СКУФЫ</font>
     </div> -->
 
-    <div class="leaderboard">
-        <img src=".\images\пивбар.png">
+    <!-- <div class="leaderboard">
+        <img src=".\images\дефолт.png">
         <font class="leaderboard_text" id="lead">#125</font>
-    </div>
+    </div> -->
 
-    <div class="settings" onclick="ShowShop()">
+    <!-- <div class="settings" onclick="ShowShop()">
         <img src=".\images\магазик.png">
         <font class="settings_text"></font>
-    </div>
+    </div> -->
 
     <!-- <div class="bottles">
         <img src=".\images\бутылки.png">
@@ -721,7 +717,37 @@
                     <div class="item-title">Telegram</div>
                     <div class="item-description">Перейти и подписаться в телеграм</div>
                 </div>
-                <svg onclick="console.log('TG')" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 55px; top: 27.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
+                <svg onclick="console.log('TG')" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 55px; top: 32.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
+                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 15px; top: 32.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg>
+            </div>
+            <br>
+            <div class="list-item">
+                <div class="item-number"><img style="width: 30px; height: 30px;" src=".\images\скуф.png"></div>
+                <div class="item-content">
+                    <div class="item-title">Skuf.com</div>
+                    <div class="item-description">Перейти и посмотреть новости про скуфа!</div>
+                </div>
+                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 55px; top: 32.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
+                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 15px; top: 32.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg>
+            </div>
+            <br>
+            <div class="list-item">
+                <div class="item-number"><img style="width: 30px; height: 30px;" src=".\images\скуф.png"></div>
+                <div class="item-content">
+                    <div class="item-title">Skuf.com</div>
+                    <div class="item-description">Перейти и посмотреть новости про скуфа!</div>
+                </div>
+                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 55px; top: 32.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
+                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 15px; top: 32.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg>
+            </div>
+            <br>
+            <div class="list-item">
+                <div class="item-number"><img style="width: 30px; height: 30px;" src=".\images\скуф.png"></div>
+                <div class="item-content">
+                    <div class="item-title">Skuf.com</div>
+                    <div class="item-description">Перейти и посмотреть новости про скуфа!</div>
+                </div>
+                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 55px; top: 32.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
                 <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 15px; top: 27.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg>
             </div>
             <br>
@@ -731,38 +757,8 @@
                     <div class="item-title">Skuf.com</div>
                     <div class="item-description">Перейти и посмотреть новости про скуфа!</div>
                 </div>
-                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 55px; top: 27.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
-                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 15px; top: 27.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg>
-            </div>
-            <br>
-            <div class="list-item">
-                <div class="item-number"><img style="width: 30px; height: 30px;" src=".\images\скуф.png"></div>
-                <div class="item-content">
-                    <div class="item-title">Skuf.com</div>
-                    <div class="item-description">Перейти и посмотреть новости про скуфа!</div>
-                </div>
-                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 55px; top: 27.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
-                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 15px; top: 27.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg>
-            </div>
-            <br>
-            <div class="list-item">
-                <div class="item-number"><img style="width: 30px; height: 30px;" src=".\images\скуф.png"></div>
-                <div class="item-content">
-                    <div class="item-title">Skuf.com</div>
-                    <div class="item-description">Перейти и посмотреть новости про скуфа!</div>
-                </div>
-                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 55px; top: 27.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
-                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 15px; top: 27.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg>
-            </div>
-            <br>
-            <div class="list-item">
-                <div class="item-number"><img style="width: 30px; height: 30px;" src=".\images\скуф.png"></div>
-                <div class="item-content">
-                    <div class="item-title">Skuf.com</div>
-                    <div class="item-description">Перейти и посмотреть новости про скуфа!</div>
-                </div>
-                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 55px; top: 27.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
-                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 15px; top: 27.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg>
+                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 55px; top: 32.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
+                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 15px; top: 32.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg>
             </div>
             <br>
             <div class="list-item">
@@ -781,6 +777,8 @@
         <div class="panel">
             <h1 style="position: fixed; top: 0px; right: 35%; text-align: center; color: white;">МАГАЗИН</h1>
             <img class="cross" src=".\images\cross.png" onclick="CloseShop()">
+            <br>
+            <br>
             <br>
             <br>
             <br>
@@ -873,14 +871,7 @@
     </div>
 
     <div class="shop" onclick="ShowShop()">
-        <img src=".\images\магазик.png">
-    </div>
-
-    <div class="bottom">
-        <div class="A" onclick="alert('test1')"><img src=".\images\магазик.png"></div>
-        <div class="B" onclick="alert('test2')"><img src=".\images\магазик.png"></div>
-        <div class="C" onclick="alert('test3')"><img src=".\images\магазик.png"></div>
-        <div class="D" onclick="alert('test4')"><img src=".\images\магазик.png"></div>
+        <img src=".\images\корзина.png">
     </div>
 
 
@@ -928,6 +919,13 @@
         document.getElementById("shop_panel").style.display = 'block';
     }
     function CloseShop(){
+        document.getElementById("shop_panel").style.display = 'none';
+    }
+
+    function ShowUpgrade(){
+        document.getElementById("shop_panel").style.display = 'block';
+    }
+    function CloseUpdrage(){
         document.getElementById("shop_panel").style.display = 'none';
     }
 
