@@ -39,19 +39,19 @@
         cursor: pointer;
         transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         -webkit-tap-highlight-color: transparent;
-    } 
+    }
 
     .skuf:active {
             transform: translate(-50%, -55%) scale(0.8);
             -webkit-tap-highlight-color: transparent;
     }
 
-    .profile {  
-            position: relative;
-            top: -43%;
-            right: 0%;
-            transform: translateX(0%);
-            width: 277.5px;
+    .lead {  
+            position: fixed;
+            top: 5.5%;
+            left: 50%;
+            transform: translate(-50%, -55%) scale(0.8);
+            width: 250px;
             height: 65px;
             /* display: flex; */
             justify-content: center;
@@ -60,7 +60,36 @@
             pointer-events: none;
             background-color: #272727;
             border-radius: 15px;
-            transform: scale(0.8);
+        }
+        .lead_text {  
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -55%) scale(0.8);
+            color: white; /* или любой другой цвет */
+            font-size: 28px; /* адаптивный размер шрифта */
+            font-weight: bold;
+            text-align: center;
+            /* z-index: 10; */
+            width: 80%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
+            white-space: nowrap; /* текст в одну строку */
+    }   
+
+    .profile {  
+            position: relative;
+            top: -37%;
+            right: 0%;
+            transform: translateX(0%);
+            width: 350px;
+            height: 65px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            -webkit-tap-highlight-color: transparent;
+            pointer-events: none;
+            background-color: #272727;
+            border-radius: 15px;
         } 
 
         .profile #actual_balance_div {
@@ -692,7 +721,10 @@
 
 </style>
 <body>
-    
+    <div class="lead">
+        <div class="lead_text">#123</div>
+    </div>
+
     <div class="profile">
         <div id="actual_balance_div">
             <img src=".\images\счетчик.png" class="firstimg">
@@ -708,11 +740,12 @@
             <font class="passive_balance_text_desc">бут/час</font>
         </div>
 
-        <!-- <div id="profile_img">
+        <div id="profile_img">
             <img src=".\images\profile.png" class="firstimg">
-            <font class="passive_balance_text" id="passive_balance">245 бут/час</font>
-        </div> -->
+        </div> 
     </div>
+
+
 
     <div class="tasks" id="tasks" onclick="ShowTasks()">
         <img src=".\images\дефолт.png">
