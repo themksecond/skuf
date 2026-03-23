@@ -48,11 +48,11 @@
 
     .lead {  
             position: fixed;
-            top: 5.5%;
+            top: 6%;
             left: 50%;
             transform: translate(-50%, -55%) scale(0.8);
             width: 200px;
-            height: 65px;
+            height: 50px;
             /* display: flex; */
             justify-content: center;
             align-items: center;
@@ -541,11 +541,39 @@
         height: 100dvh;
         margin: 0;
         padding: 0;
-        background: url(images/лока.png) no-repeat;
+        background: url(images/фон.png) no-repeat;
         background-size: 100% 100%; /* растягивает по ширине и высоте */
         background-position: center;
         background-repeat: no-repeat;
         position: relative;
+    }
+
+    .house {
+        width: 70vw;
+        height: 65dvh;
+        margin: 0;
+        padding: 0;
+        background: url(images/дом.png) no-repeat;
+        background-size: 100% 100%; /* растягивает по ширине и высоте */
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0px;
+        top: 15%;
+    }
+
+    .rubbish {
+        width: 20vw;
+        height: 15vh;
+        margin: 0;
+        padding: 0;
+        background: url(images/бак.png) no-repeat;
+        background-size: 100% 100%; /* растягивает по ширине и высоте */
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 8%;
+        top: 35%;
     }
 
     .pre-panel  {
@@ -669,7 +697,7 @@
             position: absolute;
             top: 75px;
             right: 7.5px;
-            background-color:rgb(255, 255, 255);
+            background-color:rgb(77, 165, 36);
             width: 80px;
             height: 30px;
             z-index: 100;
@@ -682,7 +710,7 @@
             position: absolute;
             top: 7.5px;
             left: 20px;
-            color:rgb(0, 0, 0);
+            color:rgb(255, 255, 255);
             font-size: 14px;
             font-style: bold;
             font-weight: 700;
@@ -690,37 +718,125 @@
             max-width: 70%;
         }
 
+        .item-pay {
+            position: absolute;
+            top: 150px;
+            right: 7.5px;
+            background-color:rgb(255, 255, 255);
+            width: 100px;
+            height: 35px;
+            z-index: 100;
+            border-radius: 10px;
+            /* right: -17.5%; */
+            /* transform: translateX(-50%); */
+        }
+
+        .item-pay-text {
+            position: absolute;
+            top: 7.5px;
+            left: 15px;
+            color:rgb(0, 0, 0);
+            font-size: 16px;
+            font-style: bold;
+            font-weight: 700;
+            /* border-bottom: #fff 1px solid; */
+            max-width: 70%;
+        }
+
+        .item-condition-text {
+            position: absolute;
+            top: 17.5px;
+            right: 10px;
+            color: #8a8888;
+            font-size: 10.7px;
+            font-style: bold;
+            font-weight: 900;
+            /* border-bottom: #fff 1px solid; */
+            max-width: 27.5%;
+        }
+
+        .item-level {
+            position: absolute;
+            top: -10px;
+            left: 7.5px;
+            background-color:rgb(255, 255, 255);
+            width: 50px;
+            height: 25px;
+            z-index: 100;
+            border-radius: 10px;
+            /* right: -17.5%; */
+            /* transform: translateX(-50%); */
+        }
+
+        .item-level-text {
+            position: absolute;
+            top: 2.5px;
+            left: 10px;
+            color:rgb(0, 0, 0);
+            font-size: 16px;
+            font-style: bold;
+            font-weight: 700;
+            /* border-bottom: #fff 1px solid; */
+        }
+
     .select_list-item {
         /* padding: 5px 25px 20px 20px; */
-        width: 80px;
-        height: 50px;
+        width: 120px;
+        height: 45px;
         top: -10px;
-        border-radius: 15px;
-        display: inline-flex;
+        border-radius: 15px 15px 0px 0px;
+        display: inline-block;
         align-items: center;
         background-color: black;
         position: relative;
+
+        h1 {
+            position: absolute; 
+            top: 0px; 
+            left: 20%; 
+            text-align: center; 
+            color: white; 
+            font-size: 18px;
+        }
     }
 
     .select-panel  {
         width: 95%;
-        height: 50px;
+        height: 45px;
         background-color: rgb(49, 27, 14);
         border: 10px black;
-        border-radius: 15px;
+        border-radius: 15px 15px 0px 0px;
         position: relative;
         top: 90px;
         left: 47.5%;
         transform: translate(-50%, -50%);
         max-width: 95%;
         z-index: 10;
-        overflow-x: auto; /* Вертикальная прокрутка */
+        /* overflow-x: auto; Вертикальная прокрутка */
         padding: 10px;
     }
-        
+
+    .select-panel-scroll  {
+        width: 100%;
+        height: 58px;
+        background-color: rgba(201, 201, 201, 0);
+        position: absolute;
+        top: 30px;
+        left: 0%;
+        transform: translate(-0%, -50%);
+        /* max-width: 95%; */
+        white-space: nowrap;
+        z-index: 10;
+        overflow-x: auto; 
+        overflow-y: hidden; 
+        padding: 10px;
+    }
+         
 
 </style>
 <body>
+    <div class="house"></div>
+    <div class="rubbish"></div>
     <div class="lead">
         <div class="lead_text">#123</div>
     </div>
@@ -863,24 +979,29 @@
         </div>
     </div>
 
-    <div class="pre-panel" id="shop_panel">
+    <div class="pre-panel" id="upgrade_panel">
         <div class="panel">
-            <h1 style="position: fixed; top: 0px; right: 35%; text-align: center; color: white;">МАГАЗИН</h1>
-            <img class="cross" src=".\images\cross.png" onclick="CloseShop()">
+            <h1 style="position: absolute; top: 0px; right: 32.5%; text-align: center; color: white;">УЛУЧШЕНИЯ</h1>
+            <img class="cross" src=".\images\cross.png" onclick="CloseUpdrage()">
 
             <div class="select-panel">
-                <div class="select_list-item">
-                    <h1 style="position: absolute; top: 2.5px; left: 7.5%; text-align: center; color: white; font-size: 18px;">ПОМОЙКА</h1>
-                </div>
-                <div class="select_list-item">
-                    <h1 style="position: absolute; top: 2.5px; left: 7.5%; text-align: center; color: white; font-size: 18px;">ПОМОЙКА</h1>
-                </div>
-                <div class="select_list-item">
-                    <h1 style="position: absolute; top: 2.5px; left: 7.5%; text-align: center; color: white; font-size: 18px;">ПОМОЙКА</h1>
-                </div>
-                <div class="select_list-item">
-                    <h1 style="position: absolute; top: 2.5px; left: 7.5%; text-align: center; color: white; font-size: 18px;">ПОМОЙКА</h1>
-                </div>
+                <div class="select-panel-scroll">
+                    <div id="select-level-1" class="select_list-item" onclick="SelectLevel('1')" style="background-color: #1a1a1a;">
+                        <h1>ПОМОЙКА</h1>
+                    </div>
+                    <div id="select-level-2" class="select_list-item" onclick="SelectLevel('2')">
+                        <h1>УБЕЖИЩЕ</h1>
+                    </div>
+                    <div id="select-level-3" class="select_list-item" onclick="SelectLevel('3')">
+                        <h1>3й ЛВЛ</h1>
+                        </div>
+                    <div id="select-level-4" class="select_list-item" onclick="SelectLevel('4')">
+                        <h1>4й ЛВЛ</h1>
+                    </div>
+                    <div id="select-level-5" class="select_list-item" onclick="SelectLevel('5')">
+                        <h1>5й ЛВЛ</h1>
+                    </div>
+                </div> 
             </div>
             
 
@@ -889,36 +1010,256 @@
             <br>
             <br>
             <br>
-            <br>
-            <div class="list-item">
-                <div class="item-number"></div>
-                <div class="item-content">
-                    <div class="item-title">Новая квартира</div>
-                    <div class="item-description">Больше пространства для тусовок с альтухами!</div>
+
+            <!--!!! 1 УРОВЕНЬ !!!-->
+            <div id="level_1_panel" style="display: block;">
+                <div class="list-item">
+                    <div class="item-number"></div>
+                    <div class="item-level">
+                        <div class="item-level-text">1 ур</div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-title">Заброшенная квартира</div>
+                        <div class="item-description">Больше пространства для тусовок с альтухами! </div>
+                        <br>
+                        <font id="upgrade_1_1" style="color: #8a8888; font-size: 11.5px;">Преимущество: <br> 
+                            + 500 бут. / сек 
+                            <br>
+                            + 1 к клику
+                        </font>
+                    </div>
+                    <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
+                    <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
+                    <div class="item-condition-text">
+                        <font> - Иметь на балансе 100 / 500 бутылок пива.</font>
+                        <br>
+                        <br>
+                        <font> - Тапнуть по экрану 157 / 1000 раз.</font>
+                        <br>
+                        <br>
+                        <font> + Выполнить задание "Пивной монстр!"</font>
+                    </div>
+                    <div class="item-pay">
+                        <div class="item-pay-text">ПРОКАЧАТЬ</div>
+                        <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
+                    </div>
+                </div>
+
+
+                <br>
+
+                <div class="list-item">
+                    <div class="item-number"></div>
+                    <div class="item-level">
+                        <div class="item-level-text">1 ур</div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-title">Старая майка</div>
+                        <div class="item-description">Ее не меняли уже несколько лет. </div>
+                        <br>
+                        <font id="upgrade_1_1" style="color: #8a8888; font-size: 11.5px;">Преимущество: <br> 
+                            + 500 бут. / сек 
+                            <br>
+                            + 1 к клику
+                        </font>
+                    </div>
+                    <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
+                    <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
+                    <div class="item-condition-text">
+                        <font> - Иметь на балансе 100 / 500 бутылок пива.</font>
+                        <br>
+                        <br>
+                        <font> - Тапнуть по экрану 157 / 1000 раз.</font>
+                        <br>
+                        <br>
+                        <font> + Выполнить задание "Пивной монстр!"</font>
+                    </div>
+                    <div class="item-pay">
+                        <div class="item-pay-text">ПРОКАЧАТЬ</div>
+                        <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
+                    </div>
+                </div>
+                
+                <br>
+
+
+                <div class="list-item">
+                    <div class="item-number"></div>
+                    <div class="item-level">
+                        <div class="item-level-text">3 ур</div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-title">Пустой бак</div>
+                        <div class="item-description">Приходится выкидывать мусор каждый час. </div>
+                        <br>
+                        <font id="upgrade_1_1" style="color: #8a8888; font-size: 11.5px;">Преимущество: <br> 
+                            + 1000 бут. / сек 
+                            <br>
+                            + 4 к клику
+                        </font>
+                    </div>
+                    <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
+                    <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
+                    <div class="item-condition-text">
+                        <font> - Иметь на балансе 100 / 1000 бутылок пива.</font>
+                        <br>
+                        <br>
+                        <font> - Тапнуть по экрану 157 / 500 раз.</font>
+                        <br>
+                        <br>
+                        <font> + Выполнить задание "Пивной монстр!"</font>
+                    </div>
+                    <div class="item-pay">
+                        <div class="item-pay-text">ПРОКАЧАТЬ</div>
+                        <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!--!!! 2 УРОВЕНЬ !!!-->
+            <div id="level_2_panel" style="display: none;">
+                <div class="list-item">
+                    <div class="item-number"></div>
+                    <div class="item-level">
+                        <div class="item-level-text">1 ур</div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-title">Квартира с ремонтом</div>
+                        <div class="item-description">Больше пространства для тусовок с альтухами! </div>
+                        <br>
+                        <font id="upgrade_1_1" style="color: #8a8888; font-size: 11.5px;">Преимущество: <br> 
+                            + 500 бут. / сек 
+                            <br>
+                            + 1 к клику
+                        </font>
+                    </div>
+                    <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
+                    <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
+                    <div class="item-condition-text">
+                        <font> - Иметь на балансе 100 / 500 бутылок пива.</font>
+                        <br>
+                        <br>
+                        <font> - Тапнуть по экрану 157 / 1000 раз.</font>
+                        <br>
+                        <br>
+                        <font> + Выполнить задание "Пивной монстр!"</font>
+                    </div>
+                    <div class="item-pay">
+                        <div class="item-pay-text">ПРОКАЧАТЬ</div>
+                        <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
+                    </div>
+                </div>
+
+
+                <br>
+
+                <div class="list-item">
+                    <div class="item-number"></div>
+                    <div class="item-level">
+                        <div class="item-level-text">1 ур</div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-title">Обновленная майка</div>
+                        <div class="item-description">Ее не меняли уже несколько лет. </div>
+                        <br>
+                        <font id="upgrade_1_1" style="color: #8a8888; font-size: 11.5px;">Преимущество: <br> 
+                            + 500 бут. / сек 
+                            <br>
+                            + 1 к клику
+                        </font>
+                    </div>
+                    <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
+                    <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
+                    <div class="item-condition-text">
+                        <font> - Иметь на балансе 100 / 500 бутылок пива.</font>
+                        <br>
+                        <br>
+                        <font> - Тапнуть по экрану 157 / 1000 раз.</font>
+                        <br>
+                        <br>
+                        <font> + Выполнить задание "Пивной монстр!"</font>
+                    </div>
+                    <div class="item-pay">
+                        <div class="item-pay-text">ПРОКАЧАТЬ</div>
+                        <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
+                    </div>
+                </div>
+                
+                <br>
+
+                <div class="list-item">
+                    <div class="item-number"></div>
+                    <div class="item-level">
+                        <div class="item-level-text">1 ур</div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-title">Старая машина</div>
+                        <div class="item-description">Эту старушку уже не запустишь. </div>
+                        <br>
+                        <font id="upgrade_1_1" style="color: #8a8888; font-size: 11.5px;">Преимущество: <br> 
+                            + 500 бут. / сек 
+                            <br>
+                            + 1 к клику
+                        </font>
+                    </div>
+                    <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
+                    <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
+                    <div class="item-condition-text">
+                        <font> - Иметь на балансе 100 / 500 бутылок пива.</font>
+                        <br>
+                        <br>
+                        <font> - Тапнуть по экрану 157 / 1000 раз.</font>
+                        <br>
+                        <br>
+                        <font> + Выполнить задание "Пивной монстр!"</font>
+                    </div>
+                    <div class="item-pay">
+                        <div class="item-pay-text">ПРОКАЧАТЬ</div>
+                        <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="list-item">
+                    <div class="item-number"></div>
+                    <div class="item-level">
+                        <div class="item-level-text">3 ур</div>
+                    </div>
+                    <div class="item-content">
+                        <div class="item-title">Металлический бак</div>
+                        <div class="item-description">Приходится выкидывать мусор каждый час. </div>
+                        <br>
+                        <font id="upgrade_1_1" style="color: #8a8888; font-size: 11.5px;">Преимущество: <br> 
+                            + 1000 бут. / сек 
+                            <br>
+                            + 4 к клику
+                        </font>
+                    </div>
+                    <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
+                    <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
+                    <div class="item-condition-text">
+                        <font> - Иметь на балансе 100 / 1000 бутылок пива.</font>
+                        <br>
+                        <br>
+                        <font> - Тапнуть по экрану 157 / 500 раз.</font>
+                        <br>
+                        <br>
+                        <font> + Выполнить задание "Пивной монстр!"</font>
+                    </div>
+                    <div class="item-pay">
+                        <div class="item-pay-text">ПРОКАЧАТЬ</div>
+                        <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
+                    </div>
                 </div>
             </div>
-            <br>
-            <div class="list-item">
-                <div class="item-number"></div>
-                <div class="item-content">
-                    <div class="item-title">Майка Abibas</div>
-                    <div class="item-description">Теперь вам точно даст каждая!</div>
-                </div>
-                <!-- <svg onclick="console.log('TG')" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 55px; top: 27.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
-                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 15px; top: 27.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
-            </div>
-            <br>
-            <div class="list-item">
-                <div class="item-number"></div>
-                <div class="item-content">
-                    <div class="item-title">Скоро</div>
-                    <div class="item-description">...</div>
-                </div>
-                <!-- <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 55px; top: 27.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
-                <svg style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 15px; top: 27.5px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
-            </div>
+
         </div>
     </div>
+    
+
+
 
     <div class="pre-panel" id="skins_panel">
         <div class="panel">
@@ -1041,10 +1382,10 @@
     }
 
     function ShowUpgrade(){
-        document.getElementById("shop_panel").style.display = 'block';
+        document.getElementById("upgrade_panel").style.display = 'block';
     }
     function CloseUpdrage(){
-        document.getElementById("shop_panel").style.display = 'none';
+        document.getElementById("upgrade_panel").style.display = 'none';
     }
 
     function ShowSpin(){
@@ -1208,6 +1549,18 @@
                 document.getElementById(key[i] + "_do").style.display = "block"
             }
         }
+    }
+
+    function SelectLevel(level){
+        for(let i = 1; i < 3; i++){
+            document.getElementById(`level_${String(i)}_panel`).style.display = "none";
+        }
+        document.getElementById(`level_${level}_panel`).style.display = "block";
+
+         for(let i = 1; i < 3; i++){
+            document.getElementById(`select-level-${i}`).style.backgroundColor = "#000000";
+        }
+        document.getElementById(`select-level-${level}`).style.backgroundColor = "#1a1a1a";
     }
 
 </script>
