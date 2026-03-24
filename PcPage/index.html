@@ -1,0 +1,151 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+        <link rel="stylesheet" href="spin.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <script src="https://telegram.org/js/telegram-web-app.js?61"></script>
+    </head>
+<style> 
+    html {
+        -webkit-text-size-adjust: 100%;
+        text-size-adjust: 100%;
+    }
+
+    * {
+        box-sizing: border-box;
+        font-family: "Neucha", cursive;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    /*Убрать полосу прокрутки у элемента*/
+    *::-webkit-scrollbar {
+        width: 0;
+    }
+
+    .lead {  
+            position: fixed;
+            top: 15%;
+            left: 50%;
+            transform: translate(-50%, -55%) scale(0.8);
+            width: 400px;
+            height: 75px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            -webkit-tap-highlight-color: transparent;
+            pointer-events: none;
+            background-color: transparent;
+            border-radius: 15px;
+        }
+        .lead_text {  
+            position: fixed;
+            top: 50%;
+            left: 42%;
+            transform: translate(-50%, -55%) scale(0.8);
+            color: white; /* или любой другой цвет */
+            font-size: 32px; /* адаптивный размер шрифта */
+            font-weight: bold;
+            text-align: center;
+            /* z-index: 10; */
+            width: 80%;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
+            white-space: nowrap; /* текст в одну строку */
+    }   
+
+    .play {  
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%, -55%) scale(0.8);
+            width: 320px;
+            height: 100px;
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+            -webkit-tap-highlight-color: transparent;
+            /* pointer-events: none; */
+            background-color: #000000;
+            border-radius: 15px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .play_text {  
+            position: fixed;
+            top: 55%;
+            left: 50%;
+            transform: translate(-50%, -55%) scale(0.8);
+            color: rgb(255, 255, 255); /* или любой другой цвет */
+            font-size: 74px; /* адаптивный размер шрифта */
+            font-weight: bold;
+            font-weight: 900;
+            text-align: center;
+            /* z-index: 10; */
+            width: 80%;
+            cursor: pointer;
+    }   
+
+    body  {
+        width: 100vw;
+        height: 100dvh;
+        margin: 0;
+        padding: 0;
+        background: url(images/фон.png) no-repeat;
+        background-size: 100% 100%; /* растягивает по ширине и высоте */
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    .house {
+        width: 80vw;
+        height: 60dvh;
+        margin: 0;
+        padding: 0;
+        background: url(images/дом.png) no-repeat;
+        background-size: 100% 100%; /* растягивает по ширине и высоте */
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        right: 0px;
+        top: 16.5%;
+        pointer-events: none;
+    }
+
+    .rubbish {
+        width: 30vw;
+        height: 15vh;
+        margin: 0;
+        padding: 0;
+        background: url(images/бак.png) no-repeat;
+        background-size: 100% 100%; /* растягивает по ширине и высоте */
+        background-position: center;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 5%;
+        top: 35%;
+    }
+         
+
+</style>
+<body>
+    <div class="house"></div>
+    <div class="rubbish"></div>
+    <div class="lead">
+        <div class="lead_text">Играй на мобильном устройстве!</div>
+    </div>
+    <img src=".\images\qr-code(black).png" onclick="window.location.href = 'https://t.me/skuf_game_tg_bot';" style="position: absolute; top: 30%; width: 220px; height: 220px; border-radius: 15px; cursor: pointer;">
+
+    <div class="play" onclick="window.location.href = 'https://t.me/skuf_game_tg_bot';">
+        <div class="play_text">ИГРАТЬ</div>
+    </div>
+
+</body>
+<script>
+    const tg = window.Telegram.WebApp;
+    tg.expand();
+</script>
+</html>

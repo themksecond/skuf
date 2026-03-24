@@ -204,16 +204,18 @@
             width: 55px;
             height: 55px;
             pointer-events: none;
+            border-radius: 50%;
             /* background-color: #393b39; */
             /* border-radius: 0px 10px 10px 0px; */
 
             }
             .profile #profile_img .firstimg {
             position: absolute;
-            top: 7.5px;
+            border-radius: 50%;
+            top: 10px;
             left: 5px;
-            width: 55px;
-            height: 55px;
+            width: 52.5px;
+            height: 52.5px;
             pointer-events: none;
     }
 
@@ -858,7 +860,7 @@
         </div>
 
         <div id="profile_img">
-            <img id="profile_img_img" src=".\images\profile.png" class="firstimg">
+            <img id="profile_img_img" src=".\images\лока2.png" class="firstimg">
         </div> 
     </div>
 
@@ -1338,8 +1340,12 @@
 
     const tg = window.Telegram.WebApp;
     const user = tg.initDataUnsafe?.user;
-    alert(user.photo_url)
-    document.getElementById("profile_img_img").src = user.photo_url
+    if (user && user.photo_url) {
+        document.getElementById("profile_img_img").src = user.photo_url
+    } else {
+        console.log("У пользователя нет аватарки или данные недоступны");
+    }   
+    
     tg.expand();
 
     // localStorage.clear()
@@ -1355,6 +1361,7 @@
     function CheckPlatform(){
         if (/Mobile|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
             console.log('Телефон или планшет');
+            user.addToHomeScreen()
         } else {
             console.log('Компьютер');
             // window.location.href = "https://example.com";
