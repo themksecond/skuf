@@ -1338,8 +1338,8 @@
 
     const tg = window.Telegram.WebApp;
     const user = tg.initDataUnsafe?.user;
-    // document.getElementById("profile_img_img").src = 
-    console.log(user.photo_url)
+    alert(user.photo_url)
+    document.getElementById("profile_img_img").src = user.photo_url
     tg.expand();
 
     // localStorage.clear()
