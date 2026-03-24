@@ -841,7 +841,7 @@
     <div class="house"></div>
     <div class="rubbish"></div>
     <div class="lead">
-        <div class="lead_text">#123</div>
+        <div id="lead_text" class="lead_text">максим | #123</div>
     </div>
 
     <div class="profile">
@@ -1117,6 +1117,7 @@
                         <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
                     </div>
                 </div>
+                <br>
 
             </div>
 
@@ -1256,6 +1257,8 @@
                         <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
                     </div>
                 </div>
+                <br>
+
             </div>
 
         </div>
@@ -1342,6 +1345,11 @@
     const user = tg.initDataUnsafe?.user;
     if (user && user.photo_url) {
         document.getElementById("profile_img_img").src = user.photo_url
+        if (user.first_name) {
+            document.getElementById("lead_text").textContent = user.first_name
+        } else {
+            console.log("У пользователя данные недоступны");
+        }   
     } else {
         console.log("У пользователя нет аватарки или данные недоступны");
     }   
@@ -1361,10 +1369,10 @@
     function CheckPlatform(){
         if (/Mobile|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
             console.log('Телефон или планшет');
-            user.addToHomeScreen()
+            // user.addToHomeScreen()
         } else {
             console.log('Компьютер');
-            window.location.href = "https://themksecond.github.io/skuf/PcPage/index.html";
+            // window.location.href = "https://themksecond.github.io/skuf/PcPage/index.html";
         }
     }
 
