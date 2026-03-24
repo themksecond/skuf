@@ -29,8 +29,8 @@
 
     .skuf {  
         position: absolute;
-        top: 53%;
-        left: 39%;
+        top: 55%;
+        left: 37%;
         transform: translate(-50%, -50%);
         max-width: 90%;
         max-height: 90dvh;
@@ -549,7 +549,7 @@
     }
 
     .house {
-        width: 75vw;
+        width: 80vw;
         height: 60dvh;
         margin: 0;
         padding: 0;
@@ -563,7 +563,7 @@
     }
 
     .rubbish {
-        width: 22.5vw;
+        width: 30vw;
         height: 15vh;
         margin: 0;
         padding: 0;
@@ -572,7 +572,7 @@
         background-position: center;
         background-repeat: no-repeat;
         position: absolute;
-        left: 8%;
+        left: 5%;
         top: 35%;
     }
 
@@ -1333,6 +1333,7 @@
 </body>
 <script  src="script.js"></script>
 <script>
+    CheckPlatform();
 
     // localStorage.clear()
     test_coin = Number(localStorage.getItem('test_coin'));
@@ -1344,9 +1345,21 @@
 
     CheckTasks();
 
+    function CheckPlatform(){
+        if (/Mobile|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+            console.log('Телефон или планшет');
+        } else {
+            console.log('Компьютер');
+            window.location.href = "https://example.com";
+        }
+    }
+
+    
+
 
     const tg = window.Telegram.WebApp;
     tg.expand();
+
 
     function Click(){
         test_coin = test_coin + 1;
