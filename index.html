@@ -1,14 +1,16 @@
-<!doctype html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
-        <link rel="stylesheet" href="spin.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Neucha&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-        <script src="https://telegram.org/js/telegram-web-app.js?61"></script>
-    </head>
-<style> 
+
+<head>
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <link rel="stylesheet" href="spin.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Neucha&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+<style>
     html {
         -webkit-text-size-adjust: 100%;
         text-size-adjust: 100%;
@@ -28,7 +30,7 @@
 
 
 
-    .skuf {  
+    .skuf {
         position: absolute;
         top: 55%;
         left: 37%;
@@ -43,509 +45,584 @@
     }
 
     .skuf:active {
-            transform: translate(-50%, -55%) scale(0.8);
-            -webkit-tap-highlight-color: transparent;
+        transform: translate(-50%, -55%) scale(0.8);
+        -webkit-tap-highlight-color: transparent;
     }
 
-    .lead {  
-            position: fixed;
-            top: 6.5%;
-            left: 50%;
-            transform: translate(-50%, -55%) scale(0.8);
-            width: 200px;
-            height: 50px;
-            /* display: flex; */
-            justify-content: center;
-            align-items: center;
-            -webkit-tap-highlight-color: transparent;
-            pointer-events: none;
-            background-color: #272727;
-            border-radius: 15px;
-        }
-        .lead_text {  
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -55%) scale(0.8);
-            color: white; /* или любой другой цвет */
-            font-size: 28px; /* адаптивный размер шрифта */
-            font-weight: bold;
-            text-align: center;
-            /* z-index: 10; */
-            width: 80%;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
-            white-space: nowrap; /* текст в одну строку */
-    }   
-
-    .profile {  
-            position: relative;
-            top: -37%;
-            right: 0%;
-            transform: translateX(0%);
-            width: 350px;
-            height: 65px;
-            /* display: flex; */
-            justify-content: center;
-            align-items: center;
-            -webkit-tap-highlight-color: transparent;
-            pointer-events: none;
-            background-color: #272727;
-            border-radius: 15px;
-        } 
-
-        .profile #actual_balance_div {
-            position: absolute;
-            width: 165px;
-            height: 45px;
-            pointer-events: none;
-            /* background-color: #393b39; */
-            /* border-radius: 10px 0px 10px 0px; */
-            }
-            .profile #actual_balance_div .firstimg {
-            position: absolute;
-            top: -30px;
-            left: 100px;
-            width: 100px;
-            height: 100px;
-            pointer-events: none;
-            }
-            .profile #actual_balance_div .secondimg {
-            position: absolute;
-            top: -30px;
-            left: 185px;
-            width: 100px;
-            height: 100px;
-            pointer-events: none;
-        }
-
-
-        .fish_balance_text {  
-            position: absolute;
-            top: 27.5%; /* процент от высоты контейнера */
-            left: 132.5%;
-            transform: translateX(-50%);
-            color: white; /* или любой другой цвет */
-            font-size: 12px; /* адаптивный размер шрифта */
-            font-weight: bold;
-            text-align: center;
-            /* z-index: 10; */
-            width: 80%;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
-            white-space: nowrap; /* текст в одну строку */
-        } 
-
-        .beer_balance_text {  
-            position: absolute;
-            top: 27.5%; /* процент от высоты контейнера */
-            left: 80%;
-            transform: translateX(-50%);
-            color: white; /* или любой другой цвет */
-            font-size: 12px; /* адаптивный размер шрифта */
-            font-weight: bold;
-            text-align: center;
-            /* z-index: 10; */
-            width: 80%;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
-            white-space: nowrap; /* текст в одну строку */
-        } 
-
-        .profile #passive_balance_div {
-            position: absolute;
-            top: 0%;
-            width: 100px;
-            height: 65px;
-            pointer-events: none;
-            /* background-color: #393b39; */
-            /* border-radius: 0px 10px 0px 10px; */
-            }
-            .profile #passive_balance_div .firstimg {
-            position: absolute;
-            top: -45px;
-            left: 0px;
-            width: 120px;
-            height: 130px;
-            pointer-events: none;
-        }
-
-        .passive_balance_text {  
-            position: absolute;
-            top: 17.5%; /* процент от высоты контейнера */
-            right: -25%;
-            transform: translateX(-50%);
-            color: white; /* или любой другой цвет */
-            font-size: 14px; /* адаптивный размер шрифта */
-            font-weight: bold;
-            text-align: center;
-            /* z-index: 10; */
-            width: 80%;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
-            white-space: nowrap; /* текст в одну строку */
-        } 
-
-        .passive_balance_text_desc {  
-            position: absolute;
-            top: 55%; /* процент от высоты контейнера */
-            right: -27.5%;
-            transform: translateX(-50%);
-            color: white; /* или любой другой цвет */
-            font-size: 12px; /* адаптивный размер шрифта */
-            font-weight: bold;
-            text-align: center;
-            /* z-index: 10; */
-            width: 80%;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
-            white-space: nowrap; /* текст в одну строку */
-        } 
-
-        .profile #profile_img {
-            position: absolute;
-            top: -5%;
-            right: 5%;
-            width: 55px;
-            height: 55px;
-            pointer-events: none;
-            border-radius: 50%;
-            /* background-color: #393b39; */
-            /* border-radius: 0px 10px 10px 0px; */
-
-            }
-            .profile #profile_img .firstimg {
-            position: absolute;
-            border-radius: 50%;
-            top: 10px;
-            left: 5px;
-            width: 52.5px;
-            height: 52.5px;
-            pointer-events: none;
+    .lead {
+        position: fixed;
+        top: 6.5%;
+        left: 50%;
+        transform: translate(-50%, -55%) scale(0.8);
+        width: 200px;
+        height: 50px;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        -webkit-tap-highlight-color: transparent;
+        pointer-events: none;
+        background-color: #272727;
+        border-radius: 15px;
     }
 
-    .tasks {  
-            position: fixed;
-            bottom: 10%;
-            left: 75px;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 45px;
-            /* display: flex; */
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            -webkit-tap-highlight-color: transparent;
-        } 
+    .lead_text {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -55%) scale(0.8);
+        color: white;
+        /* или любой другой цвет */
+        font-size: 28px;
+        /* адаптивный размер шрифта */
+        font-weight: bold;
+        text-align: center;
+        /* z-index: 10; */
+        width: 80%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* тень для лучшей читаемости */
+        white-space: nowrap;
+        /* текст в одну строку */
+    }
 
-        .tasks img {
-            width: 120px;
-            height: 45px;
-            transform: scale(4.75);
-            object-fit: contain;
-            pointer-events: none;
-        }
+    .profile {
+        position: relative;
+        top: -37%;
+        right: 0%;
+        transform: translateX(0%);
+        width: 350px;
+        height: 65px;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        -webkit-tap-highlight-color: transparent;
+        pointer-events: none;
+        background-color: #272727;
+        border-radius: 15px;
+    }
 
+    .profile #actual_balance_div {
+        position: absolute;
+        width: 165px;
+        height: 45px;
+        pointer-events: none;
+        /* background-color: #393b39; */
+        /* border-radius: 10px 0px 10px 0px; */
+    }
 
-        .tasks_text {  
-            position: absolute;
-            top: 25%; /* процент от высоты контейнера */
-            left: 50%;
-            transform: translateX(-50%);
-            color: white; /* или любой другой цвет */
-            font-size: 16px; /* адаптивный размер шрифта */
-            font-weight: bold;
-            text-align: center;
-            /* z-index: 10; */
-            width: 80%;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
-            white-space: nowrap; /* текст в одну строку */
-        } 
+    .profile #actual_balance_div .firstimg {
+        position: absolute;
+        top: -30px;
+        left: 100px;
+        width: 100px;
+        height: 100px;
+        pointer-events: none;
+    }
 
-        .upgrade {  
-            position: fixed;
-            bottom: 2.5%;
-            left: 75px;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 45px;
-            /* display: flex; */
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            -webkit-tap-highlight-color: transparent;
-        } 
-
-        .upgrade img {
-            width: 120px;
-            height: 45px;
-            transform: scale(4.75);
-            object-fit: contain; 
-            pointer-events: none;
-        }
-
-
-        .upgrade_text {  
-            position: absolute;
-            top: 32.5%; /* процент от высоты контейнера */
-            left: 51%;
-            transform: translateX(-50%);
-            color: white; /* или любой другой цвет */
-            font-size: 14px; /* адаптивный размер шрифта */
-            font-weight: bold;
-            text-align: center;
-            /* z-index: 10; */
-            width: 80%;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
-            white-space: nowrap; /* текст в одну строку */
-    } 
-
-    .settings {  
-            position: fixed;
-            top: 3%;
-            left: 50px;
-            transform: translateX(-50%);
-            width: 75px;
-            height: 75px;
-            /* display: flex; */
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            -webkit-tap-highlight-color: transparent;
-        } 
-
-        .settings img {
-            width: 75px;
-            height: 75px;
-            transform: scale(3);
-            /* object-fit: contain; сохраняет пропорции картинки */
-            pointer-events: none;
-        }
+    .profile #actual_balance_div .secondimg {
+        position: absolute;
+        top: -30px;
+        left: 185px;
+        width: 100px;
+        height: 100px;
+        pointer-events: none;
+    }
 
 
-        .settings_text {  
-            position: absolute;
-            top: 35%; /* процент от высоты контейнера */
-            left: 45%;
-            transform: translateX(-50%);
-            color: black; /* или любой другой цвет */
-            font-size: 12px; /* адаптивный размер шрифта */
-            font-weight: bold;
-            text-align: center;
-            /* z-index: 10; */
-            width: 80%;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
-            white-space: nowrap; /* текст в одну строку */
-        } 
+    .fish_balance_text {
+        position: absolute;
+        top: 27.5%;
+        /* процент от высоты контейнера */
+        left: 132.5%;
+        transform: translateX(-50%);
+        color: white;
+        /* или любой другой цвет */
+        font-size: 12px;
+        /* адаптивный размер шрифта */
+        font-weight: bold;
+        text-align: center;
+        /* z-index: 10; */
+        width: 80%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* тень для лучшей читаемости */
+        white-space: nowrap;
+        /* текст в одну строку */
+    }
 
-    .skins {  
-            position: fixed;
-            top: 22.5%;
-            left: 85px;
-            transform: translateX(-50%);
-            width: 225px;
-            height: 75px;
-            /* display: flex; */
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            -webkit-tap-highlight-color: transparent;
-        } 
+    .beer_balance_text {
+        position: absolute;
+        top: 27.5%;
+        /* процент от высоты контейнера */
+        left: 80%;
+        transform: translateX(-50%);
+        color: white;
+        /* или любой другой цвет */
+        font-size: 12px;
+        /* адаптивный размер шрифта */
+        font-weight: bold;
+        text-align: center;
+        /* z-index: 10; */
+        width: 80%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* тень для лучшей читаемости */
+        white-space: nowrap;
+        /* текст в одну строку */
+    }
 
-        .skins img {
-            width: 225px;
-            height: 75px;
-            transform: scale(3);
-            object-fit: contain; /* сохраняет пропорции картинки */
-            pointer-events: none;
-        }
+    .profile #passive_balance_div {
+        position: absolute;
+        top: 0%;
+        width: 100px;
+        height: 65px;
+        pointer-events: none;
+        /* background-color: #393b39; */
+        /* border-radius: 0px 10px 0px 10px; */
+    }
 
+    .profile #passive_balance_div .firstimg {
+        position: absolute;
+        top: -45px;
+        left: 0px;
+        width: 120px;
+        height: 130px;
+        pointer-events: none;
+    }
 
-        .skins_text {  
-            position: absolute;
-            top: 38%; /* процент от высоты контейнера */
-            left: 45%;
-            transform: translateX(-50%);
-            color: black; /* или любой другой цвет */
-            font-size: 12px; /* адаптивный размер шрифта */
-            font-weight: bold;
-            text-align: center;
-            /* z-index: 10; */
-            width: 80%;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
-            white-space: nowrap; /* текст в одну строку */
-        } 
+    .passive_balance_text {
+        position: absolute;
+        top: 17.5%;
+        /* процент от высоты контейнера */
+        right: -25%;
+        transform: translateX(-50%);
+        color: white;
+        /* или любой другой цвет */
+        font-size: 14px;
+        /* адаптивный размер шрифта */
+        font-weight: bold;
+        text-align: center;
+        /* z-index: 10; */
+        width: 80%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* тень для лучшей читаемости */
+        white-space: nowrap;
+        /* текст в одну строку */
+    }
 
-    .leaderboard {  
-            position: fixed;
-            top: 13.5%;
-            right: -92.5px;
-            transform: translateX(-50%);
-            width: 175px;
-            height: 65px;
-            /* display: flex; */
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            -webkit-tap-highlight-color: transparent;
-        } 
+    .passive_balance_text_desc {
+        position: absolute;
+        top: 55%;
+        /* процент от высоты контейнера */
+        right: -27.5%;
+        transform: translateX(-50%);
+        color: white;
+        /* или любой другой цвет */
+        font-size: 12px;
+        /* адаптивный размер шрифта */
+        font-weight: bold;
+        text-align: center;
+        /* z-index: 10; */
+        width: 80%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* тень для лучшей читаемости */
+        white-space: nowrap;
+        /* текст в одну строку */
+    }
 
-        .leaderboard img {
-            width: 175px;
-            height: 65px;
-            transform: scale(3);
-            object-fit: contain; /* сохраняет пропорции картинки */
-            pointer-events: none;
-        }
+    .profile #profile_img {
+        position: absolute;
+        top: -5%;
+        right: 5%;
+        width: 55px;
+        height: 55px;
+        pointer-events: none;
+        border-radius: 50%;
+        /* background-color: #393b39; */
+        /* border-radius: 0px 10px 10px 0px; */
 
-        .leaderboard_text {  
-            position: absolute;
-            top: 27.5%; /* процент от высоты контейнера */
-            left: 37.5%;
-            transform: translateX(-50%);
-            color: white; /* или любой другой цвет */
-            font-size: 20px; /* адаптивный размер шрифта */
-            font-weight: bold;
-            text-align: center;
-            /* z-index: 10; */
-            width: 80%;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
-            white-space: nowrap; /* текст в одну строку */
-        } 
+    }
 
-    .shop {  
-            position: fixed;
-            top: 17.5%;
-            right: -30px;
-            transform: translateX(-50%);
-            width: 75px;
-            height: 75px;
-            /* display: flex; */
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            -webkit-tap-highlight-color: transparent;
-        } 
+    .profile #profile_img .firstimg {
+        position: absolute;
+        border-radius: 50%;
+        top: 10px;
+        left: 5px;
+        width: 52.5px;
+        height: 52.5px;
+        pointer-events: none;
+    }
 
-        .shop:active {
-            transform: translate(-50%, 5%) scale(0.8);
-        }
+    .tasks {
+        position: fixed;
+        bottom: 10%;
+        left: 75px;
+        transform: translateX(-50%);
+        width: 117.5px;
+        height: 42.5px;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -webkit-tap-highlight-color: transparent;
+    }
 
-        .shop img {
-            width: 75px;
-            height: 75px;
-            transform: scale(1.2);
-            object-fit: contain; /* сохраняет пропорции картинки */
-            pointer-events: none;
-
-        }
-
-
-        .shop_text {  
-            position: absolute;
-            top: 45%; /* процент от высоты контейнера */
-            right: -17.5%;
-            transform: translateX(-50%);
-            color: black; /* или любой другой цвет */
-            font-size: 2.5dvh; /* адаптивный размер шрифта */
-            font-weight: bold;
-            text-align: center;
-            /* z-index: 10; */
-            width: 80%;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
-            white-space: nowrap; /* текст в одну строку */
-        } 
-
-    .spin {  
-            position: fixed;
-            bottom: 5%;
-            right: -30px;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 100px;
-            /* display: flex; */
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            -webkit-tap-highlight-color: transparent;
-        } 
-
-        .spin img {
-            width: 100px;
-            height: 100px;
-            object-fit: contain; /* сохраняет пропорции картинки */
-        }
-
-        .spin:active {
-            transform: translate(-50%, -5%) scale(0.8);
-        }
+    .tasks img {
+        width: 120px;
+        height: 45px;
+        transform: scale(4.75);
+        object-fit: contain;
+        pointer-events: none;
+    }
 
 
-        .spin_text {  
-            position: absolute;
-            bottom: 45%; /* процент от высоты контейнера */
-            right: -17.5%;
-            transform: translateX(-50%);
-            color: black; /* или любой другой цвет */
-            font-size: 3dvh; /* адаптивный размер шрифта */
-            font-weight: bold;
-            text-align: center;
-            /* z-index: 10; */
-            width: 80%;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
-            white-space: nowrap; /* текст в одну строку */
-        } 
+    .tasks_text {
+        position: absolute;
+        top: 50%;
+        /* процент от высоты контейнера */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        /* или любой другой цвет */
+        font-size: 16px;
+        /* адаптивный размер шрифта */
+        font-weight: bold;
+        text-align: center;
+        /* z-index: 10; */
+        width: 80%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* тень для лучшей читаемости */
+        white-space: nowrap;
+        /* текст в одну строку */
+    }
 
-    .bottles {  
-            position: fixed;
-            bottom: 4%;
-            left: 90px;
-            transform: translateX(-50%);
-            width: 300px;
-            height: 300px;
-            /* display: flex; */
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            -webkit-tap-highlight-color: transparent;
-        } 
+    .upgrade {
+        position: fixed;
+        bottom: 2.5%;
+        left: 75px;
+        transform: translateX(-50%);
+        width: 117.5px;
+        height: 42.5px;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -webkit-tap-highlight-color: transparent;
+    }
 
-        .bottles img {
-            width: 300px;
-            height:3 30px;
-            object-fit: contain; /* сохраняет пропорции картинки */
-        }
-
-        .bottles:active {
-            transform: translate(-50%, -5%) scale(0.8);
-        }
+    .upgrade img {
+        width: 120px;
+        height: 45px;
+        transform: scale(4.75);
+        object-fit: contain;
+        pointer-events: none;
+    }
 
 
-        .bottles_text {  
-            position: absolute;
-            bottom: 45%; /* процент от высоты контейнера */
-            right: -17.5%;
-            transform: translateX(-50%);
-            color: black; /* или любой другой цвет */
-            font-size: 2.5dvh; /* адаптивный размер шрифта */
-            font-weight: bold;
-            text-align: center;
-            /* z-index: 10; */
-            width: 80%;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* тень для лучшей читаемости */
-            white-space: nowrap; /* текст в одну строку */
-        } 
+    .upgrade_text {
+        position: absolute;
+        top: 50%;
+        /* процент от высоты контейнера */
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        /* или любой другой цвет */
+        font-size: 16px;
+        /* адаптивный размер шрифта */
+        font-weight: bold;
+        text-align: center;
+        /* z-index: 10; */
+        width: 80%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* тень для лучшей читаемости */
+        white-space: nowrap;
+        /* текст в одну строку */
+    }
 
-    body  {
+    .settings {
+        position: fixed;
+        top: 3%;
+        left: 50px;
+        transform: translateX(-50%);
+        width: 75px;
+        height: 75px;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .settings img {
+        width: 75px;
+        height: 75px;
+        transform: scale(3);
+        /* object-fit: contain; сохраняет пропорции картинки */
+        pointer-events: none;
+    }
+
+
+    .settings_text {
+        position: absolute;
+        top: 35%;
+        /* процент от высоты контейнера */
+        left: 45%;
+        transform: translateX(-50%);
+        color: black;
+        /* или любой другой цвет */
+        font-size: 12px;
+        /* адаптивный размер шрифта */
+        font-weight: bold;
+        text-align: center;
+        /* z-index: 10; */
+        width: 80%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* тень для лучшей читаемости */
+        white-space: nowrap;
+        /* текст в одну строку */
+    }
+
+    .skins {
+        position: fixed;
+        top: 22.5%;
+        left: 85px;
+        transform: translateX(-50%);
+        width: 225px;
+        height: 75px;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .skins img {
+        width: 225px;
+        height: 75px;
+        transform: scale(3);
+        object-fit: contain;
+        /* сохраняет пропорции картинки */
+        pointer-events: none;
+    }
+
+
+    .skins_text {
+        position: absolute;
+        top: 38%;
+        /* процент от высоты контейнера */
+        left: 45%;
+        transform: translateX(-50%);
+        color: black;
+        /* или любой другой цвет */
+        font-size: 12px;
+        /* адаптивный размер шрифта */
+        font-weight: bold;
+        text-align: center;
+        /* z-index: 10; */
+        width: 80%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* тень для лучшей читаемости */
+        white-space: nowrap;
+        /* текст в одну строку */
+    }
+
+    .leaderboard {
+        position: fixed;
+        top: 13.5%;
+        right: -92.5px;
+        transform: translateX(-50%);
+        width: 175px;
+        height: 65px;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .leaderboard img {
+        width: 175px;
+        height: 65px;
+        transform: scale(3);
+        object-fit: contain;
+        /* сохраняет пропорции картинки */
+        pointer-events: none;
+    }
+
+    .leaderboard_text {
+        position: absolute;
+        top: 27.5%;
+        /* процент от высоты контейнера */
+        left: 37.5%;
+        transform: translateX(-50%);
+        color: white;
+        /* или любой другой цвет */
+        font-size: 20px;
+        /* адаптивный размер шрифта */
+        font-weight: bold;
+        text-align: center;
+        /* z-index: 10; */
+        width: 80%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* тень для лучшей читаемости */
+        white-space: nowrap;
+        /* текст в одну строку */
+    }
+
+    .shop {
+        position: fixed;
+        top: 17.5%;
+        right: -30px;
+        transform: translateX(-50%);
+        width: 75px;
+        height: 75px;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .shop:active {
+        transform: translate(-50%, 5%) scale(0.8);
+    }
+
+    .shop img {
+        width: 75px;
+        height: 75px;
+        transform: scale(1.2);
+        object-fit: contain;
+        /* сохраняет пропорции картинки */
+        pointer-events: none;
+
+    }
+
+
+    .shop_text {
+        position: absolute;
+        top: 45%;
+        /* процент от высоты контейнера */
+        right: -17.5%;
+        transform: translateX(-50%);
+        color: black;
+        /* или любой другой цвет */
+        font-size: 2.5dvh;
+        /* адаптивный размер шрифта */
+        font-weight: bold;
+        text-align: center;
+        /* z-index: 10; */
+        width: 80%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* тень для лучшей читаемости */
+        white-space: nowrap;
+        /* текст в одну строку */
+    }
+
+    .spin {
+        position: fixed;
+        bottom: 5%;
+        right: -30px;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 100px;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .spin img {
+        width: 100px;
+        height: 100px;
+        object-fit: contain;
+        /* сохраняет пропорции картинки */
+    }
+
+    .spin:active {
+        transform: translate(-50%, -5%) scale(0.8);
+    }
+
+
+    .spin_text {
+        position: absolute;
+        bottom: 45%;
+        /* процент от высоты контейнера */
+        right: -17.5%;
+        transform: translateX(-50%);
+        color: black;
+        /* или любой другой цвет */
+        font-size: 3dvh;
+        /* адаптивный размер шрифта */
+        font-weight: bold;
+        text-align: center;
+        /* z-index: 10; */
+        width: 80%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* тень для лучшей читаемости */
+        white-space: nowrap;
+        /* текст в одну строку */
+    }
+
+    .bottles {
+        position: fixed;
+        bottom: 4%;
+        left: 90px;
+        transform: translateX(-50%);
+        width: 300px;
+        height: 300px;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .bottles img {
+        width: 300px;
+        height: 3 30px;
+        object-fit: contain;
+        /* сохраняет пропорции картинки */
+    }
+
+    .bottles:active {
+        transform: translate(-50%, -5%) scale(0.8);
+    }
+
+
+    .bottles_text {
+        position: absolute;
+        bottom: 45%;
+        /* процент от высоты контейнера */
+        right: -17.5%;
+        transform: translateX(-50%);
+        color: black;
+        /* или любой другой цвет */
+        font-size: 2.5dvh;
+        /* адаптивный размер шрифта */
+        font-weight: bold;
+        text-align: center;
+        /* z-index: 10; */
+        width: 80%;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        /* тень для лучшей читаемости */
+        white-space: nowrap;
+        /* текст в одну строку */
+    }
+
+    body {
         width: 100vw;
         height: 100dvh;
         margin: 0;
         padding: 0;
         background: url(images/фон.png) no-repeat;
-        background-size: 100% 100%; /* растягивает по ширине и высоте */
+        background-size: 100% 100%;
+        /* растягивает по ширине и высоте */
         background-position: center;
         background-repeat: no-repeat;
         position: relative;
@@ -557,7 +634,8 @@
         margin: 0;
         padding: 0;
         background: url(images/дом.png) no-repeat;
-        background-size: 100% 100%; /* растягивает по ширине и высоте */
+        background-size: 100% 100%;
+        /* растягивает по ширине и высоте */
         background-position: center;
         background-repeat: no-repeat;
         position: absolute;
@@ -571,7 +649,8 @@
         margin: 0;
         padding: 0;
         background: url(images/бак.png) no-repeat;
-        background-size: 100% 100%; /* растягивает по ширине и высоте */
+        background-size: 100% 100%;
+        /* растягивает по ширине и высоте */
         background-position: center;
         background-repeat: no-repeat;
         position: absolute;
@@ -579,7 +658,7 @@
         top: 35%;
     }
 
-    .pre-panel  {
+    .pre-panel {
         width: 100%;
         height: 100%;
         /* margin: 0;
@@ -595,7 +674,7 @@
         display: none;
     }
 
-    .panel  {
+    .panel {
         width: 85%;
         height: 80%;
         /* margin: 0;
@@ -610,17 +689,19 @@
         max-width: 90%;
         max-height: 90dvh;
         z-index: 10;
-        overflow-y: auto; /* Вертикальная прокрутка */
+        overflow-y: auto;
+        /* Вертикальная прокрутка */
         padding: 10px;
-        }
-        .panel .cross  {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            top: 1%;
-            right: 1%;
-            cursor: pointer;
-        }
+    }
+
+    .panel .cross {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        top: 1%;
+        right: 1%;
+        cursor: pointer;
+    }
 
     /* .card  {
         height: 75px;
@@ -635,7 +716,7 @@
         margin-left: 20px;
         width: 60vw;
         /* padding-top: 100px; */
-        /* display: flex; 
+    /* display: flex; 
         }
         .card img  {
             position: absolute;
@@ -646,141 +727,142 @@
             cursor: pointer;
         } */
 
-        .list-item {
-            padding: 25px 15px;
-            border-radius: 15px;
-            display: flex;
-            align-items: center;
-            background-color: black;
-            position: relative;
-        }
-        
-        .list-item:last-child {
-            border-bottom: none;
-        }
-        
-        .list-item:hover {
-            background: #141010c7;
-        }
-        
-        .item-number {
-            width: 40px;
-            height: 40px;
-            background: #4CAF50;
-            color: white;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            font-weight: bold;
-        }
-        
-        .item-content {
-            /* flex: 1; */
-            /* border-bottom: #fff 1px solid; */
-            /* border-top: #fff 1px solid; */
-            width: 200px;
-        }
-        
-        .item-title {
-            color: beige;
-            font-size: 15px;
-            font-weight: bold;
-            margin-bottom: 3px;
-        }
-        
-        .item-description {
-            color: #8a8888;
-            font-size: 11.5px;
-            /* border-bottom: #fff 1px solid; */
-            max-width: 70%;
-        }
-        .item-reward {
-            position: absolute;
-            top: 75px;
-            right: 7.5px;
-            background-color:rgb(77, 165, 36);
-            width: 80px;
-            height: 30px;
-            z-index: 100;
-            border-radius: 10px;
-            /* right: -17.5%; */
-            /* transform: translateX(-50%); */
-        }
+    .list-item {
+        padding: 25px 15px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        background-color: black;
+        position: relative;
+    }
 
-        .item-reward-text {
-            position: absolute;
-            top: 7.5px;
-            left: 20px;
-            color:rgb(255, 255, 255);
-            font-size: 14px;
-            font-style: bold;
-            font-weight: 700;
-            /* border-bottom: #fff 1px solid; */
-            max-width: 70%;
-        }
+    .list-item:last-child {
+        border-bottom: none;
+    }
 
-        .item-pay {
-            position: absolute;
-            top: 150px;
-            right: 7.5px;
-            background-color:rgb(255, 255, 255);
-            width: 100px;
-            height: 35px;
-            z-index: 100;
-            border-radius: 10px;
-            /* right: -17.5%; */
-            /* transform: translateX(-50%); */
-        }
+    .list-item:hover {
+        background: #141010c7;
+    }
 
-        .item-pay-text {
-            position: absolute;
-            top: 7.5px;
-            left: 15px;
-            color:rgb(0, 0, 0);
-            font-size: 16px;
-            font-style: bold;
-            font-weight: 700;
-            /* border-bottom: #fff 1px solid; */
-            max-width: 70%;
-        }
+    .item-number {
+        width: 40px;
+        height: 40px;
+        background: #4CAF50;
+        color: white;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 15px;
+        font-weight: bold;
+    }
 
-        .item-condition-text {
-            position: absolute;
-            top: 17.5px;
-            right: 10px;
-            color: #8a8888;
-            font-size: 10.7px;
-            font-style: bold;
-            font-weight: 900;
-            /* border-bottom: #fff 1px solid; */
-            max-width: 27.5%;
-        }
+    .item-content {
+        /* flex: 1; */
+        /* border-bottom: #fff 1px solid; */
+        /* border-top: #fff 1px solid; */
+        width: 200px;
+    }
 
-        .item-level {
-            position: absolute;
-            top: -10px;
-            left: 7.5px;
-            background-color:rgb(255, 255, 255);
-            width: 50px;
-            height: 25px;
-            z-index: 100;
-            border-radius: 10px;
-            /* right: -17.5%; */
-            /* transform: translateX(-50%); */
-        }
+    .item-title {
+        color: beige;
+        font-size: 15px;
+        font-weight: bold;
+        margin-bottom: 3px;
+    }
 
-        .item-level-text {
-            position: absolute;
-            top: 2.5px;
-            left: 10px;
-            color:rgb(0, 0, 0);
-            font-size: 16px;
-            font-style: bold;
-            font-weight: 700;
-            /* border-bottom: #fff 1px solid; */
-        }
+    .item-description {
+        color: #8a8888;
+        font-size: 11.5px;
+        /* border-bottom: #fff 1px solid; */
+        max-width: 70%;
+    }
+
+    .item-reward {
+        position: absolute;
+        top: 75px;
+        right: 7.5px;
+        background-color: rgb(77, 165, 36);
+        width: 80px;
+        height: 30px;
+        z-index: 100;
+        border-radius: 10px;
+        /* right: -17.5%; */
+        /* transform: translateX(-50%); */
+    }
+
+    .item-reward-text {
+        position: absolute;
+        top: 7.5px;
+        left: 20px;
+        color: rgb(255, 255, 255);
+        font-size: 14px;
+        font-style: bold;
+        font-weight: 700;
+        /* border-bottom: #fff 1px solid; */
+        max-width: 70%;
+    }
+
+    .item-pay {
+        position: absolute;
+        top: 150px;
+        right: 7.5px;
+        background-color: rgb(255, 255, 255);
+        width: 100px;
+        height: 35px;
+        z-index: 100;
+        border-radius: 10px;
+        /* right: -17.5%; */
+        /* transform: translateX(-50%); */
+    }
+
+    .item-pay-text {
+        position: absolute;
+        top: 7.5px;
+        left: 15px;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-style: bold;
+        font-weight: 700;
+        /* border-bottom: #fff 1px solid; */
+        max-width: 70%;
+    }
+
+    .item-condition-text {
+        position: absolute;
+        top: 17.5px;
+        right: 10px;
+        color: #8a8888;
+        font-size: 10.7px;
+        font-style: bold;
+        font-weight: 900;
+        /* border-bottom: #fff 1px solid; */
+        max-width: 27.5%;
+    }
+
+    .item-level {
+        position: absolute;
+        top: -10px;
+        left: 7.5px;
+        background-color: rgb(255, 255, 255);
+        width: 50px;
+        height: 25px;
+        z-index: 100;
+        border-radius: 10px;
+        /* right: -17.5%; */
+        /* transform: translateX(-50%); */
+    }
+
+    .item-level-text {
+        position: absolute;
+        top: 2.5px;
+        left: 10px;
+        color: rgb(0, 0, 0);
+        font-size: 16px;
+        font-style: bold;
+        font-weight: 700;
+        /* border-bottom: #fff 1px solid; */
+    }
 
     .select_list-item {
         /* padding: 5px 25px 20px 20px; */
@@ -794,16 +876,17 @@
         position: relative;
 
         h1 {
-            position: absolute; 
-            top: 0px; 
-            left: 20%; 
-            text-align: center; 
-            color: white; 
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /* text-align: center; */
+            color: white;
             font-size: 18px;
         }
     }
 
-    .select-panel  {
+    .select-panel {
         width: 95%;
         height: 45px;
         background-color: rgb(49, 27, 14);
@@ -819,7 +902,7 @@
         padding: 10px;
     }
 
-    .select-panel-scroll  {
+    .select-panel-scroll {
         width: 100%;
         height: 58px;
         background-color: rgba(201, 201, 201, 0);
@@ -830,13 +913,37 @@
         /* max-width: 95%; */
         white-space: nowrap;
         z-index: 10;
-        overflow-x: auto; 
-        overflow-y: hidden; 
+        overflow-x: auto;
+        overflow-y: hidden;
         padding: 10px;
     }
-         
 
+    .goals {
+        position: absolute;
+        top: 20%;
+        left: 20px;
+        width: 100px;
+        height: 140px;
+        background-color: #272727;
+        border-radius: 12px;
+        padding-left: 10px;
+        padding-top: 10px;
+        transform: scale(1.1);
+    }
+
+    .goals-condition-text {
+        position: relative;
+        color: #cecece;
+        font-size: 10px;
+        font-style: bold;
+        font-weight: 900;
+        /* border-bottom: #fff 1px solid; */
+        max-width: 90%;
+        padding-bottom: 10px;
+        /* padding-left: 20px; */
+    }
 </style>
+
 <body>
     <div class="house"></div>
     <div class="rubbish"></div>
@@ -861,8 +968,27 @@
 
         <div id="profile_img">
             <img id="profile_img_img" src=".\images\лока2.png" class="firstimg">
-        </div> 
+        </div>
     </div>
+
+
+
+
+    <div class="goals">
+        <font color="white" style="position: relative; left: 25%; top: -5px;">ЦЕЛИ:</font>
+        <div class="goals-condition-text" id="goal_1">
+            <font> - Иметь на балансе 100 / 500 бутылок пива.</font>
+        </div>
+
+        <div class="goals-condition-text" id="goal_2">
+            <font> - Тапнуть по экрану 157 / 100</font>
+        </div>
+
+        <div class="goals-condition-text" id="goal_3">
+            <font style="text-decoration: line-through;"> - Выполнить задание "Пивной монстр!" </font>
+        </div>
+    </div>
+
 
 
 
@@ -875,7 +1001,7 @@
         <img src=".\images\дефолт.png">
         <font class="upgrade_text">УЛУЧШЕНИЯ</font>
     </div>
-    
+
     <!-- <div class="skins" onclick="ShowSkins()">
         <img src=".\images\задания.png">
         <font class="skins_text">СКУФЫ</font>
@@ -900,84 +1026,363 @@
         <img src=".\images\колесо.png">
         <font class="spin_text"></font>
     </div>
-    
-    
-    <img class="skuf" id="skuf" src=".\images\скуф1.png" onclick="Click()"> 
+
+
+    <img class="skuf" id="skuf" src=".\images\скуф1.png" onclick="Click()">
 
     <div class="pre-panel" id="task_panel">
         <div class="panel">
             <h1 style="position: fixed; top: 0px; right: 35%; text-align: center; color: white;">ЗАДАНИЯ</h1>
             <img class="cross" src=".\images\cross.png" onclick="CloseTasks()">
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
-            <br>
 
-
-            <div class="list-item">
-                <div class="item-number"><img style="width: 50px; height: 50px;" src=".\images\telegram.png"></div>
-                <div class="item-content">
-                    <div class="item-title">Telegram</div>
-                    <div class="item-description">Перейти и подписаться в телеграм</div>
-                    <!-- <div class="item-reward">100</div> -->
-                </div>
-                <svg onclick="CheckTelegram(); console.log('TG')" id="check_telegram_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
-                <svg id="check_telegram_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg>
-                <div class="item-reward">
-                    <div class="item-reward-text">100</div>
-                    <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png">
+            <div class="select-panel">
+                <div class="select-panel-scroll">
+                    <div id="select-task-1" class="select_list-item" onclick="SelectTask('1')"
+                        style="background-color: #1a1a1a;">
+                        <h1>ОСНОВЫ</h1>
+                    </div>
+                    <div id="select-task-2" class="select_list-item" onclick="SelectTask('2')">
+                        <h1>НАЧАЛО</h1>
+                    </div>
+                    <div id="select-task-3" class="select_list-item" onclick="SelectTask('3')">
+                        <h1>3й ЛВЛ</h1>
+                    </div>
+                    <div id="select-task-4" class="select_list-item" onclick="SelectTask('4')">
+                        <h1>4й ЛВЛ</h1>
+                    </div>
+                    <div id="select-task-5" class="select_list-item" onclick="SelectTask('5')">
+                        <h1>5й ЛВЛ</h1>
+                    </div>
                 </div>
             </div>
+
+            <br>
+            <br>
+            <br>
+            <br>
             <br>
 
-            <div class="list-item">
-                <div class="item-number"><img style="width: 50px; height: 50px;" src=".\images\telegram.png"></div>
-                <div class="item-content">
-                    <div class="item-title">Пивной монстр!</div>
-                    <div class="item-description">Иметь на балансе 500 бутылок пива.</div>
-                    <!-- <div class="item-reward">100</div> -->
+            <div id="task_1_panel" style="display: block;">
+                <div class="list-item">
+                    <div class="item-number"><img style="width: 50px; height: 50px;" src=".\images\telegram.png"></div>
+                    <div class="item-content">
+                        <div class="item-title">Telegram</div>
+                        <div class="item-description">Перейти и подписаться в телеграм</div>
+                        <!-- <div class="item-reward">100</div> -->
+                    </div>
+                    <svg onclick="CheckTelegram(); console.log('TG')" id="check_telegram_do"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                            stroke-width="0.048"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z"
+                                fill="white"></path>
+                        </g>
+                    </svg>
+                    <svg id="check_telegram_complete"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z"
+                                fill="green"></path>
+                        </g>
+                    </svg>
+                    <div class="item-reward">
+                        <div class="item-reward-text">100</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
+                    </div>
                 </div>
-                <svg onclick="BeerMonster(); console.log('BM')" id="beer_monster_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
-                <svg id="beer_monster_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg>
-                <div class="item-reward">
-                    <div class="item-reward-text">100</div>
-                    <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png">
-                </div>
-            </div>
-            <br>
+                <br>
 
-            <div class="list-item">
-                <div class="item-number"><img style="width: 50px; height: 50px;" src=".\images\telegram.png"></div>
-                <div class="item-content">
-                    <div class="item-title">Тап-Тап</div>
-                    <div class="item-description" id="tap_tap_progress">Тапнуть по экрану 1 тыс. раз. / </div>
+                <div class="list-item">
+                    <div class="item-number"><img style="width: 50px; height: 50px;" src=".\images\telegram.png"></div>
+                    <div class="item-content">
+                        <div class="item-title">Пивной монстр!</div>
+                        <div class="item-description">Иметь на балансе 500 бутылок пива.</div>
+                        <!-- <div class="item-reward">100</div> -->
+                    </div>
+                    <svg onclick="BeerMonster(); console.log('BM')" id="beer_monster_test_do"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                            stroke-width="0.048"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z"
+                                fill="white"></path>
+                        </g>
+                    </svg>
+                    <svg id="beer_monster_test_complete"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z"
+                                fill="green"></path>
+                        </g>
+                    </svg>
+                    <div class="item-reward">
+                        <div class="item-reward-text">100</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
+                    </div>
                 </div>
-                <svg onclick="TapTap(); console.log('TT')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
-                <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg>
-                <div class="item-reward">
-                    <div class="item-reward-text">300</div>
-                    <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png">
-                </div>
-            </div>
-            <br>
+                <br>
 
-            <div class="list-item">
-                <div class="item-number"><img style="width: 50px; height: 50px;" src=".\images\telegram.png"></div>
-                <div class="item-content">
-                    <div class="item-title">Большая тусовка!</div>
-                    <div class="item-description" id="tap_tap_progress">Иметь на балансе 2000 бутылок пива.</div>
+                <div class="list-item">
+                    <div class="item-number"><img style="width: 50px; height: 50px;" src=".\images\telegram.png"></div>
+                    <div class="item-content">
+                        <div class="item-title">Тап-Тап</div>
+                        <div class="item-description" id="tap_tap_progress">Тапнуть по экрану 1 тыс. раз. / </div>
+                    </div>
+                    <svg onclick="TapTap(); console.log('TT')" id="tap_tap_test_do"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                            stroke-width="0.048"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z"
+                                fill="white"></path>
+                        </g>
+                    </svg>
+                    <svg id="tap_tap_test_complete"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z"
+                                fill="green"></path>
+                        </g>
+                    </svg>
+                    <div class="item-reward">
+                        <div class="item-reward-text">300</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
+                    </div>
                 </div>
-                <svg onclick="BigParty(); console.log('BP')" id="big_party_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
-                <svg id="big_party_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg>
-                <div class="item-reward">
-                    <div class="item-reward-text">500</div>
-                    <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png">
+                <br>
+
+                <div class="list-item">
+                    <div class="item-number"><img style="width: 50px; height: 50px;" src=".\images\telegram.png"></div>
+                    <div class="item-content">
+                        <div class="item-title">Большая тусовка!</div>
+                        <div class="item-description" id="tap_tap_progress">Иметь на балансе 2000 бутылок пива.</div>
+                    </div>
+                    <svg onclick="BigParty(); console.log('BP')" id="big_party_test_do"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                            stroke-width="0.048"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z"
+                                fill="white"></path>
+                        </g>
+                    </svg>
+                    <svg id="big_party_test_complete"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z"
+                                fill="green"></path>
+                        </g>
+                    </svg>
+                    <div class="item-reward">
+                        <div class="item-reward-text">500</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
+                    </div>
                 </div>
+                <br>
+
             </div>
-            <br>
+
+            <div id="task_2_panel" style="display: none;">
+                <div class="list-item">
+                    <div class="item-number"><img style="width: 50px; height: 50px;" src=".\images\telegram.png"></div>
+                    <div class="item-content">
+                        <div class="item-title">Team</div>
+                        <div class="item-description">Перейти и подписаться в телеграм</div>
+                        <!-- <div class="item-reward">100</div> -->
+                    </div>
+                    <svg onclick="CheckTelegram(); console.log('TG')" id="check_telegram_do"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                            stroke-width="0.048"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z"
+                                fill="white"></path>
+                        </g>
+                    </svg>
+                    <svg id="check_telegram_complete"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z"
+                                fill="green"></path>
+                        </g>
+                    </svg>
+                    <div class="item-reward">
+                        <div class="item-reward-text">100</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
+                    </div>
+                </div>
+                <br>
+
+                <div class="list-item">
+                    <div class="item-number"><img style="width: 50px; height: 50px;" src=".\images\telegram.png"></div>
+                    <div class="item-content">
+                        <div class="item-title">Пивной монстр!</div>
+                        <div class="item-description">Иметь на балансе 500 бутылок пива.</div>
+                        <!-- <div class="item-reward">100</div> -->
+                    </div>
+                    <svg onclick="BeerMonster(); console.log('BM')" id="beer_monster_test_do"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                            stroke-width="0.048"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z"
+                                fill="white"></path>
+                        </g>
+                    </svg>
+                    <svg id="beer_monster_test_complete"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z"
+                                fill="green"></path>
+                        </g>
+                    </svg>
+                    <div class="item-reward">
+                        <div class="item-reward-text">100</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
+                    </div>
+                </div>
+                <br>
+
+                <div class="list-item">
+                    <div class="item-number"><img style="width: 50px; height: 50px;" src=".\images\telegram.png"></div>
+                    <div class="item-content">
+                        <div class="item-title">Тап-Тап</div>
+                        <div class="item-description" id="tap_tap_progress">Тапнуть по экрану 1 тыс. раз. / </div>
+                    </div>
+                    <svg onclick="TapTap(); console.log('TT')" id="tap_tap_test_do"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                            stroke-width="0.048"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z"
+                                fill="white"></path>
+                        </g>
+                    </svg>
+                    <svg id="tap_tap_test_complete"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z"
+                                fill="green"></path>
+                        </g>
+                    </svg>
+                    <div class="item-reward">
+                        <div class="item-reward-text">300</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
+                    </div>
+                </div>
+                <br>
+
+                <div class="list-item">
+                    <div class="item-number"><img style="width: 50px; height: 50px;" src=".\images\telegram.png"></div>
+                    <div class="item-content">
+                        <div class="item-title">Большая тусовка!</div>
+                        <div class="item-description" id="tap_tap_progress">Иметь на балансе 2000 бутылок пива.</div>
+                    </div>
+                    <svg onclick="BigParty(); console.log('BP')" id="big_party_test_do"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC"
+                            stroke-width="0.048"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z"
+                                fill="white"></path>
+                        </g>
+                    </svg>
+                    <svg id="big_party_test_complete"
+                        style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;"
+                        viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <rect width="24" height="24" fill="transparent"></rect>
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z"
+                                fill="green"></path>
+                        </g>
+                    </svg>
+                    <div class="item-reward">
+                        <div class="item-reward-text">500</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
+                    </div>
+                </div>
+                <br>
+
+            </div>
 
         </div>
     </div>
@@ -989,7 +1394,8 @@
 
             <div class="select-panel">
                 <div class="select-panel-scroll">
-                    <div id="select-level-1" class="select_list-item" onclick="SelectLevel('1')" style="background-color: #1a1a1a;">
+                    <div id="select-level-1" class="select_list-item" onclick="SelectLevel('1')"
+                        style="background-color: #1a1a1a;">
                         <h1>ПОМОЙКА</h1>
                     </div>
                     <div id="select-level-2" class="select_list-item" onclick="SelectLevel('2')">
@@ -997,16 +1403,16 @@
                     </div>
                     <div id="select-level-3" class="select_list-item" onclick="SelectLevel('3')">
                         <h1>3й ЛВЛ</h1>
-                        </div>
+                    </div>
                     <div id="select-level-4" class="select_list-item" onclick="SelectLevel('4')">
                         <h1>4й ЛВЛ</h1>
                     </div>
                     <div id="select-level-5" class="select_list-item" onclick="SelectLevel('5')">
                         <h1>5й ЛВЛ</h1>
                     </div>
-                </div> 
+                </div>
             </div>
-            
+
 
             <br>
             <br>
@@ -1019,14 +1425,14 @@
                 <div class="list-item">
                     <div class="item-number"></div>
                     <div class="item-level">
-                        <div class="item-level-text">1 ур</div>
+                        <div class="item-level-text" id="upgrade_1_1_1_text">1 ур</div>
                     </div>
                     <div class="item-content">
                         <div class="item-title">Заброшенная квартира</div>
                         <div class="item-description">Больше пространства для тусовок с альтухами! </div>
                         <br>
-                        <font id="upgrade_1_1" style="color: #8a8888; font-size: 11.5px;">Преимущество: <br> 
-                            + 500 бут. / сек 
+                        <font style="color: #8a8888; font-size: 11.5px;">Преимущество: <br>
+                            + 500 бут. / сек
                             <br>
                             + 1 к клику
                         </font>
@@ -1034,15 +1440,15 @@
                     <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
                     <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
                     <div class="item-condition-text">
-                        <font> - Иметь на балансе 100 / 500 бутылок пива.</font>
+                        <font id="upgrade_1_1_1"> - Иметь на балансе 100 / 500 бутылок пива.</font>
                         <br>
                         <br>
-                        <font> - Тапнуть по экрану 157 / 1000 раз.</font>
+                        <font id="upgrade_1_1_2"> - Тапнуть по экрану 157 / 1000 раз.</font>
                         <br>
                         <br>
-                        <font> + Выполнить задание "Пивной монстр!"</font>
+                        <font id="upgrade_1_1_3"> + Выполнить задание "Пивной монстр!"</font>
                     </div>
-                    <div class="item-pay">
+                    <div class="item-pay" id="upgrade_1_1_button" onclick="Upgrade_1_1_1()">
                         <div class="item-pay-text">ПРОКАЧАТЬ</div>
                         <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
                     </div>
@@ -1060,8 +1466,8 @@
                         <div class="item-title">Старая майка</div>
                         <div class="item-description">Ее не меняли уже несколько лет. </div>
                         <br>
-                        <font id="upgrade_1_1" style="color: #8a8888; font-size: 11.5px;">Преимущество: <br> 
-                            + 500 бут. / сек 
+                        <font style="color: #8a8888; font-size: 11.5px;">Преимущество: <br>
+                            + 500 бут. / сек
                             <br>
                             + 1 к клику
                         </font>
@@ -1069,20 +1475,20 @@
                     <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
                     <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
                     <div class="item-condition-text">
-                        <font> - Иметь на балансе 100 / 500 бутылок пива.</font>
+                        <font id="upgrade_1_2_1"> - Иметь на балансе 100 / 500 бутылок пива.</font>
                         <br>
                         <br>
-                        <font> - Тапнуть по экрану 157 / 1000 раз.</font>
+                        <font id="upgrade_1_2_2"> - Тапнуть по экрану 157 / 1000 раз.</font>
                         <br>
                         <br>
-                        <font> + Выполнить задание "Пивной монстр!"</font>
+                        <font id="upgrade_1_2_3"> + Выполнить задание "Пивной монстр!"</font>
                     </div>
                     <div class="item-pay">
                         <div class="item-pay-text">ПРОКАЧАТЬ</div>
                         <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
                     </div>
                 </div>
-                
+
                 <br>
 
 
@@ -1095,8 +1501,8 @@
                         <div class="item-title">Пустой бак</div>
                         <div class="item-description">Приходится выкидывать мусор каждый час. </div>
                         <br>
-                        <font id="upgrade_1_1" style="color: #8a8888; font-size: 11.5px;">Преимущество: <br> 
-                            + 1000 бут. / сек 
+                        <font style="color: #8a8888; font-size: 11.5px;">Преимущество: <br>
+                            + 1000 бут. / сек
                             <br>
                             + 4 к клику
                         </font>
@@ -1104,13 +1510,13 @@
                     <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
                     <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
                     <div class="item-condition-text">
-                        <font> - Иметь на балансе 100 / 1000 бутылок пива.</font>
+                        <font id="upgrade_1_3_1"> - Иметь на балансе 100 / 1000 бутылок пива.</font>
                         <br>
                         <br>
-                        <font> - Тапнуть по экрану 157 / 500 раз.</font>
+                        <font id="upgrade_1_3_2"> - Тапнуть по экрану 157 / 500 раз.</font>
                         <br>
                         <br>
-                        <font> + Выполнить задание "Пивной монстр!"</font>
+                        <font id="upgrade_1_3_3"> + Выполнить задание "Пивной монстр!"</font>
                     </div>
                     <div class="item-pay">
                         <div class="item-pay-text">ПРОКАЧАТЬ</div>
@@ -1132,8 +1538,8 @@
                         <div class="item-title">Квартира с ремонтом</div>
                         <div class="item-description">Больше пространства для тусовок с альтухами! </div>
                         <br>
-                        <font id="upgrade_1_1" style="color: #8a8888; font-size: 11.5px;">Преимущество: <br> 
-                            + 500 бут. / сек 
+                        <font style="color: #8a8888; font-size: 11.5px;">Преимущество: <br>
+                            + 500 бут. / сек
                             <br>
                             + 1 к клику
                         </font>
@@ -1141,13 +1547,13 @@
                     <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
                     <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
                     <div class="item-condition-text">
-                        <font> - Иметь на балансе 100 / 500 бутылок пива.</font>
+                        <font id="upgrade_2_1_1"> - Иметь на балансе 100 / 500 бутылок пива.</font>
                         <br>
                         <br>
-                        <font> - Тапнуть по экрану 157 / 1000 раз.</font>
+                        <font id="upgrade_2_1_2"> - Тапнуть по экрану 157 / 1000 раз.</font>
                         <br>
                         <br>
-                        <font> + Выполнить задание "Пивной монстр!"</font>
+                        <font id="upgrade_2_1_3"> + Выполнить задание "Пивной монстр!"</font>
                     </div>
                     <div class="item-pay">
                         <div class="item-pay-text">ПРОКАЧАТЬ</div>
@@ -1167,8 +1573,8 @@
                         <div class="item-title">Обновленная майка</div>
                         <div class="item-description">Ее не меняли уже несколько лет. </div>
                         <br>
-                        <font id="upgrade_1_1" style="color: #8a8888; font-size: 11.5px;">Преимущество: <br> 
-                            + 500 бут. / сек 
+                        <font style="color: #8a8888; font-size: 11.5px;">Преимущество: <br>
+                            + 500 бут. / сек
                             <br>
                             + 1 к клику
                         </font>
@@ -1176,20 +1582,20 @@
                     <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
                     <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
                     <div class="item-condition-text">
-                        <font> - Иметь на балансе 100 / 500 бутылок пива.</font>
+                        <font id="upgrade_2_2_1"> - Иметь на балансе 100 / 500 бутылок пива.</font>
                         <br>
                         <br>
-                        <font> - Тапнуть по экрану 157 / 1000 раз.</font>
+                        <font id="upgrade_2_2_2"> - Тапнуть по экрану 157 / 1000 раз.</font>
                         <br>
                         <br>
-                        <font> + Выполнить задание "Пивной монстр!"</font>
+                        <font id="upgrade_2_2_3"> + Выполнить задание "Пивной монстр!"</font>
                     </div>
                     <div class="item-pay">
                         <div class="item-pay-text">ПРОКАЧАТЬ</div>
                         <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
                     </div>
                 </div>
-                
+
                 <br>
 
                 <div class="list-item">
@@ -1201,8 +1607,8 @@
                         <div class="item-title">Старая машина</div>
                         <div class="item-description">Эту старушку уже не запустишь. </div>
                         <br>
-                        <font id="upgrade_1_1" style="color: #8a8888; font-size: 11.5px;">Преимущество: <br> 
-                            + 500 бут. / сек 
+                        <font style="color: #8a8888; font-size: 11.5px;">Преимущество: <br>
+                            + 500 бут. / сек
                             <br>
                             + 1 к клику
                         </font>
@@ -1210,13 +1616,13 @@
                     <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
                     <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
                     <div class="item-condition-text">
-                        <font> - Иметь на балансе 100 / 500 бутылок пива.</font>
+                        <font id="upgrade_2_3_1"> - Иметь на балансе 100 / 500 бутылок пива.</font>
                         <br>
                         <br>
-                        <font> - Тапнуть по экрану 157 / 1000 раз.</font>
+                        <font id="upgrade_2_3_2"> - Тапнуть по экрану 157 / 1000 раз.</font>
                         <br>
                         <br>
-                        <font> + Выполнить задание "Пивной монстр!"</font>
+                        <font id="upgrade_2_3_3"> + Выполнить задание "Пивной монстр!"</font>
                     </div>
                     <div class="item-pay">
                         <div class="item-pay-text">ПРОКАЧАТЬ</div>
@@ -1235,8 +1641,8 @@
                         <div class="item-title">Металлический бак</div>
                         <div class="item-description">Приходится выкидывать мусор каждый час. </div>
                         <br>
-                        <font id="upgrade_1_1" style="color: #8a8888; font-size: 11.5px;">Преимущество: <br> 
-                            + 1000 бут. / сек 
+                        <font style="color: #8a8888; font-size: 11.5px;">Преимущество: <br>
+                            + 1000 бут. / сек
                             <br>
                             + 4 к клику
                         </font>
@@ -1244,13 +1650,13 @@
                     <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
                     <svg id="tap_tap_test_complete" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px; display: none;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M7.25007 2.38782C8.54878 2.0992 10.1243 2 12 2C13.8757 2 15.4512 2.0992 16.7499 2.38782C18.06 2.67897 19.1488 3.176 19.9864 4.01358C20.824 4.85116 21.321 5.94002 21.6122 7.25007C21.9008 8.54878 22 10.1243 22 12C22 13.8757 21.9008 15.4512 21.6122 16.7499C21.321 18.06 20.824 19.1488 19.9864 19.9864C19.1488 20.824 18.06 21.321 16.7499 21.6122C15.4512 21.9008 13.8757 22 12 22C10.1243 22 8.54878 21.9008 7.25007 21.6122C5.94002 21.321 4.85116 20.824 4.01358 19.9864C3.176 19.1488 2.67897 18.06 2.38782 16.7499C2.0992 15.4512 2 13.8757 2 12C2 10.1243 2.0992 8.54878 2.38782 7.25007C2.67897 5.94002 3.176 4.85116 4.01358 4.01358C4.85116 3.176 5.94002 2.67897 7.25007 2.38782ZM15.7071 9.29289C16.0976 9.68342 16.0976 10.3166 15.7071 10.7071L12.0243 14.3899C11.4586 14.9556 10.5414 14.9556 9.97568 14.3899L11 13.3656L9.97568 14.3899L8.29289 12.7071C7.90237 12.3166 7.90237 11.6834 8.29289 11.2929C8.68342 10.9024 9.31658 10.9024 9.70711 11.2929L11 12.5858L14.2929 9.29289C14.6834 8.90237 15.3166 8.90237 15.7071 9.29289Z" fill="green"></path> </g></svg> -->
                     <div class="item-condition-text">
-                        <font> - Иметь на балансе 100 / 1000 бутылок пива.</font>
+                        <font id="upgrade_2_4_1"> - Иметь на балансе 100 / 1000 бутылок пива.</font>
                         <br>
                         <br>
-                        <font> - Тапнуть по экрану 157 / 500 раз.</font>
+                        <font id="upgrade_2_4_2"> - Тапнуть по экрану 157 / 500 раз.</font>
                         <br>
                         <br>
-                        <font> + Выполнить задание "Пивной монстр!"</font>
+                        <font id="upgrade_2_4_3"> + Выполнить задание "Пивной монстр!"</font>
                     </div>
                     <div class="item-pay">
                         <div class="item-pay-text">ПРОКАЧАТЬ</div>
@@ -1263,7 +1669,7 @@
 
         </div>
     </div>
-    
+
 
 
 
@@ -1337,24 +1743,25 @@
 
     <!-- <img src=".\images\кнопка.png" width=1500 height=1500 style="margin-left: -0px; margin-top: 480px;"> -->
 </body>
-<script  src="script.js"></script>
+<script src="script.js"></script>
+<!-- <script src="https://telegram.org/js/telegram-web-app.js?61"></script> -->
 <script>
     CheckPlatform();
 
-    const tg = window.Telegram.WebApp;
-    const user = tg.initDataUnsafe?.user;
-    if (user && user.photo_url) {
-        document.getElementById("profile_img_img").src = user.photo_url
-        if (user.first_name) {
-            document.getElementById("lead_text").textContent = user.first_name
-        } else {
-            console.log("У пользователя данные недоступны");
-        }   
-    } else {
-        console.log("У пользователя нет аватарки или данные недоступны");
-    }   
-    
-    tg.expand();
+    // const tg = window.Telegram.WebApp;
+    // const user = tg.initDataUnsafe?.user;
+    // if (user && user.photo_url) {
+    //     document.getElementById("profile_img_img").src = user.photo_url
+    //     if (user.first_name) {
+    //         document.getElementById("lead_text").textContent = user.first_name
+    //     } else {
+    //         console.log("У пользователя данные недоступны");
+    //     }
+    // } else {
+    //     console.log("У пользователя нет аватарки или данные недоступны");
+    // }
+
+    // tg.expand();
 
     // localStorage.clear()
     test_coin = Number(localStorage.getItem('test_coin'));
@@ -1365,21 +1772,22 @@
     document.getElementById("tap_tap_progress").textContent = `Тапнуть по экрану ${Number(tap)} / 1000 раз.`
 
     CheckTasks();
+    Check_Upgrade_1_1_1();
 
-    function CheckPlatform(){
+    function CheckPlatform() {
         if (/Mobile|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
             console.log('Телефон или планшет');
             // user.addToHomeScreen()
         } else {
             console.log('Компьютер');
-            window.location.href = "https://themksecond.github.io/skuf/PcPage/index.html";
+            // window.location.href = "https://themksecond.github.io/skuf/PcPage/index.html";
         }
     }
 
-    
 
 
-    function Click(){
+
+    function Click() {
         test_coin = test_coin + 1;
         tap = tap + 1;
         console.log("+1")
@@ -1387,42 +1795,45 @@
         localStorage.setItem('test_coin', test_coin);
         localStorage.setItem('tap', tap);
         console.log(tap)
-        document.getElementById("beer_balance").textContent = Number(test_coin); 
+        document.getElementById("beer_balance").textContent = Number(test_coin);
         document.getElementById("tap_tap_progress").textContent = `Тапнуть по экрану ${Number(tap)} / 1000 раз.`
+
+        Check_Upgrade_1_1_1();
+
     }
 
-    function ShowTasks(){
+    function ShowTasks() {
         document.getElementById("task_panel").style.display = 'block';
     }
-    function CloseTasks(){
+    function CloseTasks() {
         document.getElementById("task_panel").style.display = 'none';
     }
 
-    function ShowSkins(){
+    function ShowSkins() {
         document.getElementById("skins_panel").style.display = 'block';
     }
-    function CloseSkins(){
+    function CloseSkins() {
         document.getElementById("skins_panel").style.display = 'none';
     }
 
-    function ShowShop(){
+    function ShowShop() {
         document.getElementById("shop_panel").style.display = 'block';
     }
-    function CloseShop(){
+    function CloseShop() {
         document.getElementById("shop_panel").style.display = 'none';
     }
 
-    function ShowUpgrade(){
+    function ShowUpgrade() {
         document.getElementById("upgrade_panel").style.display = 'block';
     }
-    function CloseUpdrage(){
+    function CloseUpdrage() {
         document.getElementById("upgrade_panel").style.display = 'none';
     }
 
-    function ShowSpin(){
+    function ShowSpin() {
         document.getElementById("spin_panel").style.display = 'block';
     }
-    function CloseSpin(){
+    function CloseSpin() {
         document.getElementById("spin_panel").style.display = 'none';
     }
 
@@ -1430,17 +1841,17 @@
 
     //!!!TASKS!!!
 
-    function CheckTelegram(){
+    function CheckTelegram() {
         // window.location = 'https://t.me/themkll';
         const key = 'check_telegram';
-        
+
         const storedValue = localStorage.getItem(key);
         let checked = storedValue ? JSON.parse(storedValue) : false;
 
         let value = true;
         localStorage.setItem(key, JSON.stringify(value));
 
-        if(checked == true){
+        if (checked == true) {
             document.getElementById("check_telegram_complete").style.display = "block"
             document.getElementById("check_telegram_do").style.display = "none"
 
@@ -1450,31 +1861,31 @@
             localStorage.setItem('test_coin', test_coin);
             document.getElementById("beer_balance").textContent = Number(test_coin);
         }
-        else{
+        else {
             document.getElementById("check_telegram_complete").style.display = "none"
             document.getElementById("check_telegram_do").style.display = "block"
         }
 
     }
 
-    function BeerMonster(){
+    function BeerMonster() {
         // window.location = 'https://t.me/themkll';
         const key = 'beer_monster_test';
-        
+
         const storedValue = localStorage.getItem(key);
         let checked = storedValue ? JSON.parse(storedValue) : false;
 
-        if(Number(localStorage.getItem('test_coin')) >= 500){
+        if (Number(localStorage.getItem('test_coin')) >= 500) {
             let value = true;
             localStorage.setItem(key, JSON.stringify(value));
         }
-        else{
+        else {
             let value = false;
             localStorage.setItem(key, JSON.stringify(value));
         }
-        
 
-        if(checked == true){
+
+        if (checked == true) {
             document.getElementById("beer_monster_test_complete").style.display = "block"
             document.getElementById("beer_monster_test_do").style.display = "none"
 
@@ -1484,31 +1895,31 @@
             localStorage.setItem('test_coin', test_coin);
             document.getElementById("beer_balance").textContent = Number(test_coin);
         }
-        else{
+        else {
             document.getElementById("beer_monster_test_complete").style.display = "none"
             document.getElementById("beer_monster_test_do").style.display = "block"
         }
 
     }
 
-    function TapTap(){
+    function TapTap() {
         // window.location = 'https://t.me/themkll';
         const key = 'tap_tap_test';
-        
+
         const storedValue = localStorage.getItem(key);
         let checked = storedValue ? JSON.parse(storedValue) : false;
 
-        if(Number(localStorage.getItem('tap')) >= 1000){
+        if (Number(localStorage.getItem('tap')) >= 1000) {
             let value = true;
             localStorage.setItem(key, JSON.stringify(value));
         }
-        else{
+        else {
             let value = false;
             localStorage.setItem(key, JSON.stringify(value));
         }
-        
 
-        if(checked == true){
+
+        if (checked == true) {
             document.getElementById("tap_tap_test_complete").style.display = "block"
             document.getElementById("tap_tap_test_do").style.display = "none"
 
@@ -1518,31 +1929,31 @@
             localStorage.setItem('test_coin', test_coin);
             document.getElementById("beer_balance").textContent = Number(test_coin);
         }
-        else{
+        else {
             document.getElementById("tap_tap_test_complete").style.display = "none"
             document.getElementById("tap_tap_test_do").style.display = "block"
         }
 
     }
 
-    function BigParty(){
+    function BigParty() {
         // window.location = 'https://t.me/themkll';
         const key = 'big_party_test';
-        
+
         const storedValue = localStorage.getItem(key);
         let checked = storedValue ? JSON.parse(storedValue) : false;
 
-        if(Number(localStorage.getItem('test_coin')) >= 2000){
+        if (Number(localStorage.getItem('test_coin')) >= 2000) {
             let value = true;
             localStorage.setItem(key, JSON.stringify(value));
         }
-        else{
+        else {
             let value = false;
             localStorage.setItem(key, JSON.stringify(value));
         }
-        
 
-        if(checked == true){
+
+        if (checked == true) {
             document.getElementById("big_party_test_complete").style.display = "block"
             document.getElementById("big_party_test_do").style.display = "none"
 
@@ -1552,47 +1963,490 @@
             localStorage.setItem('test_coin', test_coin);
             document.getElementById("beer_balance").textContent = Number(test_coin);
         }
-        else{
+        else {
             document.getElementById("big_party_test_complete").style.display = "none"
             document.getElementById("big_party_test_do").style.display = "block"
         }
 
     }
 
-    function CheckTasks(){
+    function CheckTasks() {
         const key = [
-            'check_telegram', 
+            'check_telegram',
             'beer_monster_test',
             'tap_tap_test',
             'big_party_test',];
 
-        for(let i = 0; i <= key.length; i++){
+        for (let i = 0; i <= key.length - 1; i++) {
             const storedValue = localStorage.getItem(key[i]);
             let checked = storedValue ? JSON.parse(storedValue) : false;
             // console.log(key[i] + "_complete")
 
-            if(checked == true){
+            if (checked == true) {
                 document.getElementById(key[i] + "_complete").style.display = "block"
                 document.getElementById(key[i] + "_do").style.display = "none"
             }
-            else{
+            else {
                 document.getElementById(key[i] + "_complete").style.display = "none"
                 document.getElementById(key[i] + "_do").style.display = "block"
             }
         }
     }
 
-    function SelectLevel(level){
-        for(let i = 1; i < 3; i++){
+    function SelectLevel(level) {
+        for (let i = 1; i < 3; i++) {
             document.getElementById(`level_${String(i)}_panel`).style.display = "none";
         }
         document.getElementById(`level_${level}_panel`).style.display = "block";
 
-         for(let i = 1; i < 3; i++){
+        for (let i = 1; i < 3; i++) {
             document.getElementById(`select-level-${i}`).style.backgroundColor = "#000000";
         }
         document.getElementById(`select-level-${level}`).style.backgroundColor = "#1a1a1a";
     }
 
+    function SelectTask(task) {
+        for (let i = 1; i < 3; i++) {
+            document.getElementById(`task_${String(i)}_panel`).style.display = "none";
+        }
+        document.getElementById(`task_${task}_panel`).style.display = "block";
+
+        for (let i = 1; i < 3; i++) {
+            document.getElementById(`select-task-${i}`).style.backgroundColor = "#000000";
+        }
+        document.getElementById(`select-task-${task}`).style.backgroundColor = "#1a1a1a";
+    }
+
+
+
+
+    function Upgrade_1_1_1() {
+        let lvl = Number(localStorage.getItem("1_1_level")) || 1;
+        document.getElementById("upgrade_1_1_1_text").textContent = `${lvl} ур`
+
+        if(lvl == 1){
+            document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 500 бутылок пива.`
+            document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1000 раз.`
+
+            document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_3").style.textDecoration = "none";
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 500) {
+                document.getElementById("upgrade_1_1_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1000) {
+                document.getElementById("upgrade_1_1_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+            //     document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                lvl++;
+                Number(localStorage.setItem("1_1_level", lvl))
+                document.getElementById("upgrade_1_1_1_text").textContent = `${lvl} ур`
+            }
+        }
+
+        if(lvl == 2){
+            document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 750 бутылок пива.`
+            document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1250 раз.`
+
+            document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_3").style.textDecoration = "none";
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 750) {
+                document.getElementById("upgrade_1_1_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1250) {
+                document.getElementById("upgrade_1_1_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+                // document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                lvl++;
+                Number(localStorage.setItem("1_1_level", lvl))
+                document.getElementById("upgrade_1_1_1_text").textContent = `${lvl} ур`
+            }
+        }
+
+        if(lvl == 3){
+            document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1000 бутылок пива.`
+            document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1500 раз.`
+
+            document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_3").style.textDecoration = "none";
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1000) {
+                document.getElementById("upgrade_1_1_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1500) {
+                document.getElementById("upgrade_1_1_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+            //     document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                lvl++;
+                Number(localStorage.setItem("1_1_level", lvl))
+                document.getElementById("upgrade_1_1_1_text").textContent = `${lvl} ур`
+            }
+        }
+
+        if(lvl == 4){
+            document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1250 бутылок пива.`
+            document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1750 раз.`
+
+            document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_3").style.textDecoration = "none";
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1250) {
+                document.getElementById("upgrade_1_1_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1750) {
+                document.getElementById("upgrade_1_1_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+            //     document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                lvl++;
+                Number(localStorage.setItem("1_1_level", lvl))
+                document.getElementById("upgrade_1_1_1_text").textContent = `${lvl} ур`
+            }
+        }
+
+        if(lvl == 5){
+            document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1500 бутылок пива.`
+            document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 2000 раз.`
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1500) {
+                document.getElementById("upgrade_1_1_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 2000) {
+                document.getElementById("upgrade_1_1_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+            //     document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                // lvl++;
+                Number(localStorage.setItem("1_1_level", lvl))
+                document.getElementById("upgrade_1_1_1_text").textContent = `МАКС.`
+            }
+        }
+    }
+
+    function Check_Upgrade_1_1_1() {
+        let lvl = Number(localStorage.getItem("1_1_level")) || 1;
+        console.log(localStorage.getItem("1_1_level"));
+        document.getElementById("upgrade_1_1_1_text").textContent = `${lvl} ур`
+
+        if(lvl == 1){
+            document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 500 бутылок пива.`
+            document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1000 раз.`
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 500) {
+                document.getElementById("upgrade_1_1_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1000) {
+                document.getElementById("upgrade_1_1_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if(i == 3){
+                document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+                console.log("D")
+            }
+        }
+
+        if(lvl == 2){
+            document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 750 бутылок пива.`
+            document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1250 раз.`
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 750) {
+                document.getElementById("upgrade_1_1_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1250) {
+                document.getElementById("upgrade_1_1_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if(i == 3){
+                document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+                console.log("D")
+            }
+        }
+
+        if(lvl == 3){
+            document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1000 бутылок пива.`
+            document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1500 раз.`
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1000) {
+                document.getElementById("upgrade_1_1_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1500) {
+                document.getElementById("upgrade_1_1_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if(i == 3){
+                document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+                console.log("D")
+            }
+        }
+
+        if(lvl == 4){
+            document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1250 бутылок пива.`
+            document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1750 раз.`
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1250) {
+                document.getElementById("upgrade_1_1_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1750) {
+                document.getElementById("upgrade_1_1_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if(i == 3){
+                document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+                console.log("D")
+            }
+
+        }
+
+        if(lvl == 5){
+            document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1500 бутылок пива.`
+            document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 2000 раз.`
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1500) {
+                document.getElementById("upgrade_1_1_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 2000) {
+                document.getElementById("upgrade_1_1_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if(i == 3){
+                document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+                console.log("D")
+            }
+        }
+    }
+
 </script>
+
 </html>
