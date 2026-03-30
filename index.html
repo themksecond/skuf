@@ -1425,14 +1425,14 @@
                 <div class="list-item">
                     <div class="item-number"></div>
                     <div class="item-level">
-                        <div class="item-level-text" id="upgrade_1_1_1_text">1 ур</div>
+                        <div class="item-level-text" id="upgrade_1_1_text">1 ур</div>
                     </div>
                     <div class="item-content">
                         <div class="item-title">Заброшенная квартира</div>
                         <div class="item-description">Больше пространства для тусовок с альтухами! </div>
                         <br>
                         <font style="color: #8a8888; font-size: 11.5px;">Преимущество: <br>
-                            + 500 бут. / сек
+                            + 5 бут. / сек
                             <br>
                             + 1 к клику
                         </font>
@@ -1448,7 +1448,7 @@
                         <br>
                         <font id="upgrade_1_1_3"> + Выполнить задание "Пивной монстр!"</font>
                     </div>
-                    <div class="item-pay" id="upgrade_1_1_button" onclick="Upgrade_1_1_1()">
+                    <div class="item-pay" id="upgrade_1_1_button" onclick="Upgrade_1_1()">
                         <div class="item-pay-text">ПРОКАЧАТЬ</div>
                         <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
                     </div>
@@ -1460,14 +1460,14 @@
                 <div class="list-item">
                     <div class="item-number"></div>
                     <div class="item-level">
-                        <div class="item-level-text">1 ур</div>
+                        <div class="item-level-text" id="upgrade_1_2_text">1 ур</div>
                     </div>
                     <div class="item-content">
                         <div class="item-title">Старая майка</div>
                         <div class="item-description">Ее не меняли уже несколько лет. </div>
                         <br>
                         <font style="color: #8a8888; font-size: 11.5px;">Преимущество: <br>
-                            + 500 бут. / сек
+                            + 5 бут. / сек
                             <br>
                             + 1 к клику
                         </font>
@@ -1483,7 +1483,7 @@
                         <br>
                         <font id="upgrade_1_2_3"> + Выполнить задание "Пивной монстр!"</font>
                     </div>
-                    <div class="item-pay">
+                    <div class="item-pay" id="upgrade_1_2_button" onclick="Upgrade_1_2()">
                         <div class="item-pay-text">ПРОКАЧАТЬ</div>
                         <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
                     </div>
@@ -1495,16 +1495,16 @@
                 <div class="list-item">
                     <div class="item-number"></div>
                     <div class="item-level">
-                        <div class="item-level-text">3 ур</div>
+                        <div class="item-level-text" id="upgrade_1_3_text">1 ур</div>
                     </div>
                     <div class="item-content">
                         <div class="item-title">Пустой бак</div>
                         <div class="item-description">Приходится выкидывать мусор каждый час. </div>
                         <br>
                         <font style="color: #8a8888; font-size: 11.5px;">Преимущество: <br>
-                            + 1000 бут. / сек
+                            + 5 бут. / сек
                             <br>
-                            + 4 к клику
+                            + 1 к клику
                         </font>
                     </div>
                     <!-- <svg onclick="console.log('Test')" id="tap_tap_test_do" style="-webkit-tap-highlight-color: transparent; cursor: pointer; position: absolute; right: 30px; top: 30px; width: 35px; height: 35px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.048"></g><g id="SVGRepo_iconCarrier"> <rect width="24" height="24" fill="transparent"></rect> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2ZM16 14C16 14.5523 15.5523 15 15 15C14.4477 15 14 14.5523 14 14V11.4142L9.70711 15.7071C9.31658 16.0976 8.68342 16.0976 8.29289 15.7071C7.90237 15.3166 7.90237 14.6834 8.29289 14.2929L12.5858 10H10C9.44772 10 9 9.55228 9 9C9 8.44772 9.44772 8 10 8H14.6717C15.4054 8 16 8.59489 16 9.32837V14Z" fill="white"></path> </g></svg>
@@ -1519,7 +1519,7 @@
                         <font id="upgrade_1_3_3"> + Выполнить задание "Пивной монстр!"</font>
                     </div>
                     <div class="item-pay">
-                        <div class="item-pay-text">ПРОКАЧАТЬ</div>
+                        <div class="item-pay-text" id="upgrade_1_3_button" onclick="Upgrade_1_3()">ПРОКАЧАТЬ</div>
                         <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
                     </div>
                 </div>
@@ -1767,12 +1767,26 @@
     test_coin = Number(localStorage.getItem('test_coin'));
     tap = Number(localStorage.getItem('tap'));
     test_fish = Number(localStorage.getItem('test_fish'));
+
+    tap_upgrade = Number(localStorage.getItem('tap_upgrade')) || 1;
+    beer_in_hour_upgrade = Number(localStorage.getItem('beer_in_hour_upgrade')) || 1;
+
     document.getElementById("beer_balance").textContent = Number(test_coin);
     document.getElementById("fish_balance").textContent = Number(test_fish);
-    document.getElementById("tap_tap_progress").textContent = `Тапнуть по экрану ${Number(tap)} / 1000 раз.`
+    document.getElementById("tap_tap_progress").textContent = `Тапнуть по экрану ${Number(tap)} / 1000 раз.`;
+
+    document.getElementById("passive_balance").textContent = Number(beer_in_hour_upgrade)
 
     CheckTasks();
-    Check_Upgrade_1_1_1();
+    Check_Upgrade_1_1();
+    Check_Upgrade_1_2();
+
+    plus = setInterval(() => {
+        test_coin = test_coin + beer_in_hour_upgrade;
+        localStorage.setItem("test_coin", test_coin);
+        document.getElementById("beer_balance").textContent = Number(test_coin);
+        console.log('Counter +1');
+    }, 1000);
 
     function CheckPlatform() {
         if (/Mobile|Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
@@ -1785,10 +1799,8 @@
     }
 
 
-
-
     function Click() {
-        test_coin = test_coin + 1;
+        test_coin = test_coin + tap_upgrade;
         tap = tap + 1;
         console.log("+1")
         console.log(test_coin)
@@ -1798,7 +1810,7 @@
         document.getElementById("beer_balance").textContent = Number(test_coin);
         document.getElementById("tap_tap_progress").textContent = `Тапнуть по экрану ${Number(tap)} / 1000 раз.`
 
-        Check_Upgrade_1_1_1();
+        Check_Upgrade_1_1();
 
     }
 
@@ -1855,11 +1867,11 @@
             document.getElementById("check_telegram_complete").style.display = "block"
             document.getElementById("check_telegram_do").style.display = "none"
 
-            test_coin = test_coin + 100;
-            console.log("+100")
-            console.log(test_coin)
-            localStorage.setItem('test_coin', test_coin);
-            document.getElementById("beer_balance").textContent = Number(test_coin);
+            test_fish = test_fish + 5;
+            console.log("+5")
+            console.log(test_fish)
+            localStorage.setItem('test_fish', test_fish);
+            document.getElementById("fish_balance").textContent = Number(test_fish);
         }
         else {
             document.getElementById("check_telegram_complete").style.display = "none"
@@ -1889,11 +1901,11 @@
             document.getElementById("beer_monster_test_complete").style.display = "block"
             document.getElementById("beer_monster_test_do").style.display = "none"
 
-            test_coin = test_coin + 100;
-            console.log("+100")
-            console.log(test_coin)
-            localStorage.setItem('test_coin', test_coin);
-            document.getElementById("beer_balance").textContent = Number(test_coin);
+            test_fish = test_fish + 5;
+            console.log("+5")
+            console.log(test_fish)
+            localStorage.setItem('test_fish', test_fish);
+            document.getElementById("fish_balance").textContent = Number(test_fish);
         }
         else {
             document.getElementById("beer_monster_test_complete").style.display = "none"
@@ -1923,11 +1935,11 @@
             document.getElementById("tap_tap_test_complete").style.display = "block"
             document.getElementById("tap_tap_test_do").style.display = "none"
 
-            test_coin = test_coin + 300;
-            console.log("+300")
-            console.log(test_coin)
-            localStorage.setItem('test_coin', test_coin);
-            document.getElementById("beer_balance").textContent = Number(test_coin);
+            test_fish = test_fish + 5;
+            console.log("+5")
+            console.log(test_fish)
+            localStorage.setItem('test_fish', test_fish);
+            document.getElementById("fish_balance").textContent = Number(test_fish);
         }
         else {
             document.getElementById("tap_tap_test_complete").style.display = "none"
@@ -1957,11 +1969,11 @@
             document.getElementById("big_party_test_complete").style.display = "block"
             document.getElementById("big_party_test_do").style.display = "none"
 
-            test_coin = test_coin + 500;
-            console.log("+500")
+            test_fish = test_fish + 5;
+            console.log("+5")
             console.log(test_coin)
-            localStorage.setItem('test_coin', test_coin);
-            document.getElementById("beer_balance").textContent = Number(test_coin);
+            localStorage.setItem('test_fish', test_fish);
+            document.getElementById("fish_balance").textContent = Number(test_fish);
         }
         else {
             document.getElementById("big_party_test_complete").style.display = "none"
@@ -2020,13 +2032,17 @@
 
 
 
-    function Upgrade_1_1_1() {
+    function Upgrade_1_1() {
         let lvl = Number(localStorage.getItem("1_1_level")) || 1;
-        document.getElementById("upgrade_1_1_1_text").textContent = `${lvl} ур`
+        document.getElementById("upgrade_1_1_text").textContent = `${lvl} ур`
+        if(lvl == 6){
+            document.getElementById("upgrade_1_1_text").textContent = `МАКС.`
+        }
 
         if(lvl == 1){
             document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 500 бутылок пива.`
             document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1000 раз.`
+            document.getElementById("upgrade_1_1_3").textContent = `Иметь на балансе ${Number(test_fish)} / 5 рыб.`
 
             document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
             document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
@@ -2051,7 +2067,7 @@
                 console.log("skip");
             }
 
-            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (Number(localStorage.getItem('test_fish')) >= 5) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
                 i++;
             }
@@ -2068,13 +2084,19 @@
             if(i == 3){
                 lvl++;
                 Number(localStorage.setItem("1_1_level", lvl))
-                document.getElementById("upgrade_1_1_1_text").textContent = `${lvl} ур`
+                document.getElementById("upgrade_1_1_text").textContent = `${lvl} ур`
+
+                tap_upgrade = tap_upgrade + 1;
+                localStorage.setItem('tap_upgrade', tap_upgrade);
+                beer_in_hour_upgrade = beer_in_hour_upgrade + 5;
+                localStorage.setItem('beer_in_hour_upgrade', beer_in_hour_upgrade);
             }
         }
 
         if(lvl == 2){
             document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 750 бутылок пива.`
             document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1250 раз.`
+            document.getElementById("upgrade_1_1_3").textContent = `Иметь на балансе ${Number(test_fish)} / 10 рыб.`
 
             document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
             document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
@@ -2099,7 +2121,7 @@
                 console.log("skip");
             }
 
-            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (Number(localStorage.getItem('test_fish')) >= 10) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
                 i++;
             }
@@ -2116,13 +2138,19 @@
             if(i == 3){
                 lvl++;
                 Number(localStorage.setItem("1_1_level", lvl))
-                document.getElementById("upgrade_1_1_1_text").textContent = `${lvl} ур`
+                document.getElementById("upgrade_1_1_text").textContent = `${lvl} ур`
+
+                tap_upgrade = tap_upgrade + 1;
+                localStorage.setItem('tap_upgrade', tap_upgrade);
+                beer_in_hour_upgrade = beer_in_hour_upgrade + 5;
+                localStorage.setItem('beer_in_hour_upgrade', beer_in_hour_upgrade);
             }
         }
 
         if(lvl == 3){
             document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1000 бутылок пива.`
             document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1500 раз.`
+            document.getElementById("upgrade_1_1_3").textContent = `Иметь на балансе ${Number(test_fish)} / 15 рыб.`
 
             document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
             document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
@@ -2147,7 +2175,7 @@
                 console.log("skip");
             }
 
-            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (Number(localStorage.getItem('test_fish')) >= 15) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
                 i++;
             }
@@ -2164,13 +2192,19 @@
             if(i == 3){
                 lvl++;
                 Number(localStorage.setItem("1_1_level", lvl))
-                document.getElementById("upgrade_1_1_1_text").textContent = `${lvl} ур`
+                document.getElementById("upgrade_1_1_text").textContent = `${lvl} ур`
+                
+                tap_upgrade = tap_upgrade + 1;
+                localStorage.setItem('tap_upgrade', tap_upgrade);
+                beer_in_hour_upgrade = beer_in_hour_upgrade + 5;
+                localStorage.setItem('beer_in_hour_upgrade', beer_in_hour_upgrade);
             }
         }
 
         if(lvl == 4){
             document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1250 бутылок пива.`
             document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1750 раз.`
+            document.getElementById("upgrade_1_1_3").textContent = `Иметь на балансе ${Number(test_fish)} / 20 рыб.`
 
             document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
             document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
@@ -2195,7 +2229,7 @@
                 console.log("skip");
             }
 
-            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (Number(localStorage.getItem('test_fish')) >= 20) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
                 i++;
             }
@@ -2212,13 +2246,25 @@
             if(i == 3){
                 lvl++;
                 Number(localStorage.setItem("1_1_level", lvl))
-                document.getElementById("upgrade_1_1_1_text").textContent = `${lvl} ур`
+                document.getElementById("upgrade_1_1_text").textContent = `${lvl} ур`
+                
+                tap_upgrade = tap_upgrade + 1;
+                localStorage.setItem('tap_upgrade', tap_upgrade);
+                beer_in_hour_upgrade = beer_in_hour_upgrade + 5;
+                localStorage.setItem('beer_in_hour_upgrade', beer_in_hour_upgrade);
             }
         }
 
         if(lvl == 5){
             document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1500 бутылок пива.`
             document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 2000 раз.`
+            document.getElementById("upgrade_1_1_3").textContent = `Иметь на балансе ${Number(test_fish)} / 20 рыб.`
+
+            document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_3").style.textDecoration = "none";
+
 
             let i = 0;
 
@@ -2238,7 +2284,7 @@
                 console.log("skip");
             }
 
-            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (Number(localStorage.getItem('test_fish')) >= 20) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
                 i++;
             }
@@ -2253,21 +2299,405 @@
             // }
 
             if(i == 3){
-                // lvl++;
+                lvl++;
                 Number(localStorage.setItem("1_1_level", lvl))
-                document.getElementById("upgrade_1_1_1_text").textContent = `МАКС.`
+                
+                tap_upgrade = tap_upgrade + 1;
+                localStorage.setItem('tap_upgrade', tap_upgrade);
+                beer_in_hour_upgrade = beer_in_hour_upgrade + 5;
+                localStorage.setItem('beer_in_hour_upgrade', beer_in_hour_upgrade);
+                // document.getElementById("upgrade_1_1_1_text").textContent = `МАКС.`
+            }
+        }
+
+        if(lvl == 6){
+            document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1500 бутылок пива.`
+            document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 2000 раз.`
+            document.getElementById("upgrade_1_1_3").textContent = `Иметь на балансе ${Number(test_fish)} / 20 рыб.`
+
+            document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_3").style.textDecoration = "none";
+
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1500) {
+                document.getElementById("upgrade_1_1_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 2000) {
+                document.getElementById("upgrade_1_1_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(localStorage.getItem('test_fish')) >= 20) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+
+            if(i == 3){
+                // Number(localStorage.setItem("1_1_level", lvl))
+                document.getElementById("upgrade_1_1_button").style.display = "none";
+                document.getElementById("upgrade_1_1_text").textContent = `МАКС.`
             }
         }
     }
 
-    function Check_Upgrade_1_1_1() {
+    function Upgrade_1_2() {
+        let lvl = Number(localStorage.getItem("1_2_level")) || 1;
+        document.getElementById("upgrade_1_2_text").textContent = `${lvl} ур`
+        if(lvl == 6){
+            document.getElementById("upgrade_1_2_text").textContent = `МАКС.`
+        }
+
+        if(lvl == 1){
+            document.getElementById("upgrade_1_2_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 500 бутылок пива.`
+            document.getElementById("upgrade_1_2_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1000 раз.`
+            document.getElementById("upgrade_1_2_3").textContent = `Иметь на балансе ${Number(test_fish)} / 5 рыб.`
+
+            document.getElementById("upgrade_1_2_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_2_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_3").style.textDecoration = "none";
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 500) {
+                document.getElementById("upgrade_1_2_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1000) {
+                document.getElementById("upgrade_1_2_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(localStorage.getItem('test_fish')) >= 5) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_2_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+            //     document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                lvl++;
+                Number(localStorage.setItem("1_2_level", lvl))
+                document.getElementById("upgrade_1_2_text").textContent = `${lvl} ур`
+
+                tap_upgrade = tap_upgrade + 1;
+                localStorage.setItem('tap_upgrade', tap_upgrade);
+                beer_in_hour_upgrade = beer_in_hour_upgrade + 5;
+                localStorage.setItem('beer_in_hour_upgrade', beer_in_hour_upgrade);
+            }
+        }
+
+        if(lvl == 2){
+            document.getElementById("upgrade_1_2_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 750 бутылок пива.`
+            document.getElementById("upgrade_1_2_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1250 раз.`
+            document.getElementById("upgrade_1_2_3").textContent = `Иметь на балансе ${Number(test_fish)} / 10 рыб.`
+
+            document.getElementById("upgrade_1_2_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_2_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_3").style.textDecoration = "none";
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 750) {
+                document.getElementById("upgrade_1_2_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1250) {
+                document.getElementById("upgrade_1_2_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(localStorage.getItem('test_fish')) >= 10) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_2_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+                // document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                lvl++;
+                Number(localStorage.setItem("1_2_level", lvl))
+                document.getElementById("upgrade_1_2_text").textContent = `${lvl} ур`
+
+                tap_upgrade = tap_upgrade + 1;
+                localStorage.setItem('tap_upgrade', tap_upgrade);
+                beer_in_hour_upgrade = beer_in_hour_upgrade + 5;
+                localStorage.setItem('beer_in_hour_upgrade', beer_in_hour_upgrade);
+            }
+        }
+
+        if(lvl == 3){
+            document.getElementById("upgrade_1_2_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1000 бутылок пива.`
+            document.getElementById("upgrade_1_2_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1500 раз.`
+            document.getElementById("upgrade_1_2_3").textContent = `Иметь на балансе ${Number(test_fish)} / 15 рыб.`
+
+            document.getElementById("upgrade_1_2_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_2_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_3").style.textDecoration = "none";
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1000) {
+                document.getElementById("upgrade_1_2_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1500) {
+                document.getElementById("upgrade_1_2_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(localStorage.getItem('test_fish')) >= 15) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_2_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+            //     document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                lvl++;
+                Number(localStorage.setItem("1_2_level", lvl))
+                document.getElementById("upgrade_1_2_text").textContent = `${lvl} ур`
+                
+                tap_upgrade = tap_upgrade + 1;
+                localStorage.setItem('tap_upgrade', tap_upgrade);
+                beer_in_hour_upgrade = beer_in_hour_upgrade + 5;
+                localStorage.setItem('beer_in_hour_upgrade', beer_in_hour_upgrade);
+            }
+        }
+
+        if(lvl == 4){
+            document.getElementById("upgrade_1_2_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1250 бутылок пива.`
+            document.getElementById("upgrade_1_2_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1750 раз.`
+            document.getElementById("upgrade_1_2_3").textContent = `Иметь на балансе ${Number(test_fish)} / 20 рыб.`
+
+            document.getElementById("upgrade_1_2_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_2_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_3").style.textDecoration = "none";
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1250) {
+                document.getElementById("upgrade_1_2_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1750) {
+                document.getElementById("upgrade_1_2_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(localStorage.getItem('test_fish')) >= 20) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_2_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+            //     document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                lvl++;
+                Number(localStorage.setItem("1_2_level", lvl))
+                document.getElementById("upgrade_1_2_text").textContent = `${lvl} ур`
+                
+                tap_upgrade = tap_upgrade + 1;
+                localStorage.setItem('tap_upgrade', tap_upgrade);
+                beer_in_hour_upgrade = beer_in_hour_upgrade + 5;
+                localStorage.setItem('beer_in_hour_upgrade', beer_in_hour_upgrade);
+            }
+        }
+
+        if(lvl == 5){
+            document.getElementById("upgrade_1_2_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1500 бутылок пива.`
+            document.getElementById("upgrade_1_2_2").textContent = `Тапнуть по экрану ${Number(tap)} / 2000 раз.`
+            document.getElementById("upgrade_1_2_3").textContent = `Иметь на балансе ${Number(test_fish)} / 20 рыб.`
+
+            document.getElementById("upgrade_1_2_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_2_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_3").style.textDecoration = "none";
+
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1500) {
+                document.getElementById("upgrade_1_2_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 2000) {
+                document.getElementById("upgrade_1_2_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(localStorage.getItem('test_fish')) >= 20) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_2_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+            //     document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                lvl++;
+                Number(localStorage.setItem("1_2_level", lvl))
+                
+                tap_upgrade = tap_upgrade + 1;
+                localStorage.setItem('tap_upgrade', tap_upgrade);
+                beer_in_hour_upgrade = beer_in_hour_upgrade + 5;
+                localStorage.setItem('beer_in_hour_upgrade', beer_in_hour_upgrade);
+                // document.getElementById("upgrade_1_1_1_text").textContent = `МАКС.`
+            }
+        }
+
+        if(lvl == 6){
+            document.getElementById("upgrade_1_2_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1500 бутылок пива.`
+            document.getElementById("upgrade_1_2_2").textContent = `Тапнуть по экрану ${Number(tap)} / 2000 раз.`
+            document.getElementById("upgrade_1_2_3").textContent = `Иметь на балансе ${Number(test_fish)} / 20 рыб.`
+
+            document.getElementById("upgrade_1_2_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_2_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_3").style.textDecoration = "none";
+
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1500) {
+                document.getElementById("upgrade_1_2_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 2000) {
+                document.getElementById("upgrade_1_2_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(localStorage.getItem('test_fish')) >= 20) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_2_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+
+            if(i == 3){
+                // Number(localStorage.setItem("1_1_level", lvl))
+                document.getElementById("upgrade_1_2_button").style.display = "none";
+                document.getElementById("upgrade_1_2_text").textContent = `МАКС.`
+            }
+        }
+    }
+
+
+    function Check_Upgrade_1_1() {
         let lvl = Number(localStorage.getItem("1_1_level")) || 1;
         console.log(localStorage.getItem("1_1_level"));
-        document.getElementById("upgrade_1_1_1_text").textContent = `${lvl} ур`
+        document.getElementById("upgrade_1_1_text").textContent = `${lvl} ур`
+        if(lvl == 6){
+            document.getElementById("upgrade_1_1_text").textContent = `МАКС.`
+        }
 
         if(lvl == 1){
             document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 500 бутылок пива.`
             document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1000 раз.`
+            document.getElementById("upgrade_1_1_3").textContent = `Иметь на балансе ${Number(test_fish)} / 5 рыб.`
+
+            document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_3").style.textDecoration = "none";
 
             let i = 0;
 
@@ -2287,7 +2717,7 @@
                 console.log("skip");
             }
 
-            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (Number(localStorage.getItem('test_fish')) >= 5) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
                 i++;
             }
@@ -2304,6 +2734,12 @@
         if(lvl == 2){
             document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 750 бутылок пива.`
             document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1250 раз.`
+            document.getElementById("upgrade_1_1_3").textContent = `Иметь на балансе ${Number(test_fish)} / 10 рыб.`
+
+            document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_3").style.textDecoration = "none";
 
             let i = 0;
 
@@ -2323,7 +2759,7 @@
                 console.log("skip");
             }
 
-            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (Number(localStorage.getItem('test_fish')) >= 10) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
                 i++;
             }
@@ -2340,6 +2776,12 @@
         if(lvl == 3){
             document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1000 бутылок пива.`
             document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1500 раз.`
+            document.getElementById("upgrade_1_1_3").textContent = `Иметь на балансе ${Number(test_fish)} / 15 рыб.`
+
+            document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_3").style.textDecoration = "none";
 
             let i = 0;
 
@@ -2359,7 +2801,7 @@
                 console.log("skip");
             }
 
-            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (Number(localStorage.getItem('test_fish')) >= 15) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
                 i++;
             }
@@ -2376,6 +2818,12 @@
         if(lvl == 4){
             document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1250 бутылок пива.`
             document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1750 раз.`
+            document.getElementById("upgrade_1_1_3").textContent = `Иметь на балансе ${Number(test_fish)} / 20 рыб.`
+
+            document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_3").style.textDecoration = "none";
 
             let i = 0;
 
@@ -2395,7 +2843,7 @@
                 console.log("skip");
             }
 
-            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (Number(localStorage.getItem('test_fish')) >= 20) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
                 i++;
             }
@@ -2413,6 +2861,13 @@
         if(lvl == 5){
             document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1500 бутылок пива.`
             document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 2000 раз.`
+            document.getElementById("upgrade_1_1_3").textContent = `Иметь на балансе ${Number(test_fish)} / 20 рыб.`
+
+            document.getElementById("upgrade_1_1_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_1_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_1_3").style.textDecoration = "none";
+
 
             let i = 0;
 
@@ -2432,7 +2887,7 @@
                 console.log("skip");
             }
 
-            if (0 == 0) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            if (Number(localStorage.getItem('test_fish')) >= 20) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
                 document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
                 i++;
             }
@@ -2442,9 +2897,359 @@
 
             if(i == 3){
                 document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
-                console.log("D")
+                console.log("D");
             }
         }
+
+        if(lvl == 6){
+            document.getElementById("upgrade_1_1_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1500 бутылок пива.`
+            document.getElementById("upgrade_1_1_2").textContent = `Тапнуть по экрану ${Number(tap)} / 2000 раз.`
+            document.getElementById("upgrade_1_1_3").textContent = `Иметь на балансе ${Number(test_fish)} / 20 рыб.`
+
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1500) {
+                document.getElementById("upgrade_1_1_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 2000) {
+                document.getElementById("upgrade_1_1_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(localStorage.getItem('test_fish')) >= 20) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_1_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if(i == 3){
+                document.getElementById("upgrade_1_1_button").style.display = "none";
+                console.log("Final");
+            }
+        }
+    }
+
+    function Check_Upgrade_1_2() {
+        let lvl = Number(localStorage.getItem("1_2_level")) || 1;
+        document.getElementById("upgrade_1_2_text").textContent = `${lvl} ур`
+        if(lvl == 6){
+            document.getElementById("upgrade_1_2_text").textContent = `МАКС.`
+        }
+
+        if(lvl == 1){
+            document.getElementById("upgrade_1_2_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 500 бутылок пива.`
+            document.getElementById("upgrade_1_2_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1000 раз.`
+            document.getElementById("upgrade_1_2_3").textContent = `Иметь на балансе ${Number(test_fish)} / 5 рыб.`
+
+            document.getElementById("upgrade_1_2_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_2_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_3").style.textDecoration = "none";
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 500) {
+                document.getElementById("upgrade_1_2_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1000) {
+                document.getElementById("upgrade_1_2_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(localStorage.getItem('test_fish')) >= 5) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_2_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+            //     document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                document.getElementById("upgrade_1_2_button").style.backgroundColor = "green";
+                console.log("D");
+            }
+        }
+
+        if(lvl == 2){
+            document.getElementById("upgrade_1_2_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 750 бутылок пива.`
+            document.getElementById("upgrade_1_2_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1250 раз.`
+            document.getElementById("upgrade_1_2_3").textContent = `Иметь на балансе ${Number(test_fish)} / 10 рыб.`
+
+            document.getElementById("upgrade_1_2_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_2_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_3").style.textDecoration = "none";
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 750) {
+                document.getElementById("upgrade_1_2_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1250) {
+                document.getElementById("upgrade_1_2_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(localStorage.getItem('test_fish')) >= 10) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_2_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+                // document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                document.getElementById("upgrade_1_2_button").style.backgroundColor = "green";
+                console.log("D");
+            }
+        }
+
+        if(lvl == 3){
+            document.getElementById("upgrade_1_2_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1000 бутылок пива.`
+            document.getElementById("upgrade_1_2_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1500 раз.`
+            document.getElementById("upgrade_1_2_3").textContent = `Иметь на балансе ${Number(test_fish)} / 15 рыб.`
+
+            document.getElementById("upgrade_1_2_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_2_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_3").style.textDecoration = "none";
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1000) {
+                document.getElementById("upgrade_1_2_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1500) {
+                document.getElementById("upgrade_1_2_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(localStorage.getItem('test_fish')) >= 15) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_2_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+            //     document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                document.getElementById("upgrade_1_2_button").style.backgroundColor = "green";
+                console.log("D");
+            }
+        }
+
+        if(lvl == 4){
+            document.getElementById("upgrade_1_2_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1250 бутылок пива.`
+            document.getElementById("upgrade_1_2_2").textContent = `Тапнуть по экрану ${Number(tap)} / 1750 раз.`
+            document.getElementById("upgrade_1_2_3").textContent = `Иметь на балансе ${Number(test_fish)} / 20 рыб.`
+
+            document.getElementById("upgrade_1_2_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_2_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_3").style.textDecoration = "none";
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1250) {
+                document.getElementById("upgrade_1_2_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 1750) {
+                document.getElementById("upgrade_1_2_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(localStorage.getItem('test_fish')) >= 20) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_2_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+            //     document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                document.getElementById("upgrade_1_2_button").style.backgroundColor = "green";
+                console.log("D");
+            }
+        }
+
+        if(lvl == 5){
+            document.getElementById("upgrade_1_2_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1500 бутылок пива.`
+            document.getElementById("upgrade_1_2_2").textContent = `Тапнуть по экрану ${Number(tap)} / 2000 раз.`
+            document.getElementById("upgrade_1_2_3").textContent = `Иметь на балансе ${Number(test_fish)} / 20 рыб.`
+
+            document.getElementById("upgrade_1_2_button").style.backgroundColor = "white";
+            document.getElementById("upgrade_1_2_1").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_2").style.textDecoration = "none";
+            document.getElementById("upgrade_1_2_3").style.textDecoration = "none";
+
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1500) {
+                document.getElementById("upgrade_1_2_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 2000) {
+                document.getElementById("upgrade_1_2_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(localStorage.getItem('test_fish')) >= 20) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_2_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            //ПРОВЕРКА
+            // if(i == 2){
+            //     document.getElementById("upgrade_1_1_button").style.backgroundColor = "green";
+            //     console.log("D")
+            // }
+
+            if(i == 3){
+                document.getElementById("upgrade_1_2_button").style.backgroundColor = "green";
+                console.log("D");
+            }
+        }
+
+        if(lvl == 6){
+            document.getElementById("upgrade_1_2_1").textContent = `- Иметь на балансе ${Number(localStorage.getItem('test_coin'))} / 1500 бутылок пива.`
+            document.getElementById("upgrade_1_2_2").textContent = `Тапнуть по экрану ${Number(tap)} / 2000 раз.`
+            document.getElementById("upgrade_1_2_3").textContent = `Иметь на балансе ${Number(test_fish)} / 20 рыб.`
+
+
+            let i = 0;
+
+            if (Number(localStorage.getItem('test_coin')) >= 1500) {
+                document.getElementById("upgrade_1_2_1").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(tap) >= 2000) {
+                document.getElementById("upgrade_1_2_2").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+            if (Number(localStorage.getItem('test_fish')) >= 20) {            /////////////////////////////!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                document.getElementById("upgrade_1_2_3").style.textDecoration = "line-through";
+                i++;
+            }
+            else {
+                console.log("skip");
+            }
+
+
+            if(i == 3){
+                // Number(localStorage.setItem("1_1_level", lvl))
+                document.getElementById("upgrade_1_2_button").style.display = "none";
+            }
+        }
+    }
+
+    function GetCoin(num){
+        test_coin = test_coin + Number(num);
+        console.log(`+${num}`);
+        console.log(test_coin);
+        localStorage.setItem('test_coin', test_coin);
+        document.getElementById("beer_balance").textContent = Number(test_coin);
+    }
+
+    function GetFish(num){
+        test_fish = test_fish + Number(num);
+        console.log(`+${num}`);
+        console.log(test_fish);
+        localStorage.setItem('test_fish', test_fish);
+        document.getElementById("fish_balance").textContent = Number(test_fish);
+    }
+
+    function GetTap(num){
+        tap = tap + Number(num);
+        console.log(`+${num}`);
+        console.log(tap);
+        localStorage.setItem('tap', tap);
+        // document.getElementById("tap_tap_progress").textContent = Number(tap);
     }
 
 </script>
