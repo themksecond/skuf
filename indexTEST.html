@@ -794,7 +794,7 @@
     .item-reward-text {
         position: absolute;
         top: 7.5px;
-        left: 30px;
+        left: 20px;
         color: rgb(255, 255, 255);
         font-size: 14px;
         font-style: bold;
@@ -948,7 +948,7 @@
         bottom: 2.5%;
         left: 50%;
         transform: translateX(-50%);
-        width: 300px;
+        width: 250px;
         height: 100px;
         /* display: flex; */
         justify-content: center;
@@ -968,7 +968,7 @@
         transform: translate(-50%, -50%);
         color: white;
         /* или любой другой цвет */
-        font-size: 26px;
+        font-size: 16px;
         /* адаптивный размер шрифта */
         font-weight: bold;
         text-align: center;
@@ -982,8 +982,8 @@
 </style>
 
 <body>
-    <div class="house" id="house"></div>
-    <div class="rubbish" id="rubbish"></div>
+    <div class="house"></div>
+    <div class="rubbish"></div>
     <div class="lead">
         <div id="lead_text" class="lead_text">максим | #123</div>
     </div>
@@ -1011,7 +1011,7 @@
 
 
 
-    <!-- <div class="goals">
+    <div class="goals">
         <font color="white" style="position: relative; left: 25%; top: -5px;">ЦЕЛИ:</font>
         <div class="goals-condition-text" id="goal_1">
             <font> - Иметь на балансе 100 / 500 бутылок пива.</font>
@@ -1024,7 +1024,9 @@
         <div class="goals-condition-text" id="goal_3">
             <font style="text-decoration: line-through;"> - Выполнить задание "Пивной монстр!" </font>
         </div>
-    </div> -->
+    </div>
+
+
 
 
     <div class="tasks" id="tasks" onclick="ShowTasks()">
@@ -1079,19 +1081,19 @@
                 <div class="select-panel-scroll">
                     <div id="select-task-1" class="select_list-item" onclick="SelectTask('1')"
                         style="background-color: #1a1a1a;">
-                        <h1 id="select-task-1-text">ОСНОВЫ</h1>
+                        <h1>ОСНОВЫ</h1>
                     </div>
                     <div id="select-task-2" class="select_list-item" onclick="SelectTask('2')">
-                        <h1 id="select-task-2-text">НАЧАЛО</h1>
+                        <h1>НАЧАЛО</h1>
                     </div>
                     <div id="select-task-3" class="select_list-item" onclick="SelectTask('3')">
-                        <h1 id="select-task-3-text">3й ЛВЛ</h1>
+                        <h1>3й ЛВЛ</h1>
                     </div>
                     <div id="select-task-4" class="select_list-item" onclick="SelectTask('4')">
-                        <h1 id="select-task-4-text">4й ЛВЛ</h1>
+                        <h1>4й ЛВЛ</h1>
                     </div>
                     <div id="select-task-5" class="select_list-item" onclick="SelectTask('5')">
-                        <h1 id="select-task-5-text">5й ЛВЛ</h1>
+                        <h1>5й ЛВЛ</h1>
                     </div>
                 </div>
             </div>
@@ -1136,9 +1138,9 @@
                         </g>
                     </svg>
                     <div class="item-reward">
-                        <div class="item-reward-text">5</div>
-                        <img style="position: absolute; width: 50px; height: 50px; top: -12.5px; right: -2.5px;"
-                            src=".\images\рыба.png">
+                        <div class="item-reward-text">100</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
                     </div>
                 </div>
                 <br>
@@ -1176,9 +1178,9 @@
                         </g>
                     </svg>
                     <div class="item-reward">
-                        <div class="item-reward-text">5</div>
-                        <img style="position: absolute; width: 50px; height: 50px; top: -12.5px; right: -2.5px;"
-                            src=".\images\рыба.png">
+                        <div class="item-reward-text">100</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
                     </div>
                 </div>
                 <br>
@@ -1215,9 +1217,9 @@
                         </g>
                     </svg>
                     <div class="item-reward">
-                        <div class="item-reward-text">5</div>
-                        <img style="position: absolute; width: 50px; height: 50px; top: -12.5px; right: -2.5px;"
-                            src=".\images\рыба.png">
+                        <div class="item-reward-text">300</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
                     </div>
                 </div>
                 <br>
@@ -1254,9 +1256,9 @@
                         </g>
                     </svg>
                     <div class="item-reward">
-                        <div class="item-reward-text">5</div>
-                        <img style="position: absolute; width: 50px; height: 50px; top: -12.5px; right: -2.5px;"
-                            src=".\images\рыба.png">
+                        <div class="item-reward-text">500</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
                     </div>
                 </div>
                 <br>
@@ -1297,9 +1299,9 @@
                         </g>
                     </svg>
                     <div class="item-reward">
-                        <div class="item-reward-text">5</div>
-                        <img style="position: absolute; width: 50px; height: 50px; top: -12.5px; right: -2.5px;"
-                            src=".\images\рыба.png">
+                        <div class="item-reward-text">100</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
                     </div>
                 </div>
                 <br>
@@ -1337,9 +1339,9 @@
                         </g>
                     </svg>
                     <div class="item-reward">
-                        <div class="item-reward-text">5</div>
-                        <img style="position: absolute; width: 50px; height: 50px; top: -12.5px; right: -2.5px;"
-                            src=".\images\рыба.png">
+                        <div class="item-reward-text">100</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
                     </div>
                 </div>
                 <br>
@@ -1376,9 +1378,9 @@
                         </g>
                     </svg>
                     <div class="item-reward">
-                        <div class="item-reward-text">5</div>
-                        <img style="position: absolute; width: 50px; height: 50px; top: -12.5px; right: -2.5px;"
-                            src=".\images\рыба.png">
+                        <div class="item-reward-text">300</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
                     </div>
                 </div>
                 <br>
@@ -1415,9 +1417,9 @@
                         </g>
                     </svg>
                     <div class="item-reward">
-                        <div class="item-reward-text">5</div>
-                        <img style="position: absolute; width: 50px; height: 50px; top: -12.5px; right: -2.5px;"
-                            src=".\images\рыба.png">
+                        <div class="item-reward-text">500</div>
+                        <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;"
+                            src=".\images\telegram.png">
                     </div>
                 </div>
                 <br>
@@ -1436,19 +1438,19 @@
                 <div class="select-panel-scroll">
                     <div id="select-level-1" class="select_list-item" onclick="SelectLevel('1')"
                         style="background-color: #1a1a1a;">
-                        <h1 id="select-level-1-text">ПОМОЙКА</h1>
+                        <h1>ПОМОЙКА</h1>
                     </div>
                     <div id="select-level-2" class="select_list-item" onclick="SelectLevel('2')">
-                        <h1 id="select-level-2-text">УБЕЖИЩЕ</h1>
+                        <h1>УБЕЖИЩЕ</h1>
                     </div>
                     <div id="select-level-3" class="select_list-item" onclick="SelectLevel('3')">
-                        <h1 id="select-level-3-text">3й ЛВЛ</h1>
+                        <h1>3й ЛВЛ</h1>
                     </div>
                     <div id="select-level-4" class="select_list-item" onclick="SelectLevel('4')">
-                        <h1 id="select-level-4-text">4й ЛВЛ</h1>
+                        <h1>4й ЛВЛ</h1>
                     </div>
                     <div id="select-level-5" class="select_list-item" onclick="SelectLevel('5')">
-                        <h1 id="select-level-5-text">5й ЛВЛ</h1>
+                        <h1>5й ЛВЛ</h1>
                     </div>
                 </div>
             </div>
@@ -1572,7 +1574,7 @@
                 <div class="list-item">
                     <div class="item-number"></div>
                     <div class="item-level">
-                        <div class="item-level-text" id="upgrade_2_1_text">1 ур</div>
+                        <div class="item-level-text">1 ур</div>
                     </div>
                     <div class="item-content">
                         <div class="item-title">Квартира с ремонтом</div>
@@ -1595,7 +1597,7 @@
                         <br>
                         <font id="upgrade_2_1_3"> + Выполнить задание "Пивной монстр!"</font>
                     </div>
-                    <div class="item-pay" id="upgrade_2_1_button" onclick="Upgrade_2_1()">
+                    <div class="item-pay">
                         <div class="item-pay-text">ПРОКАЧАТЬ</div>
                         <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
                     </div>
@@ -1607,7 +1609,7 @@
                 <div class="list-item">
                     <div class="item-number"></div>
                     <div class="item-level">
-                        <div class="item-level-text" id="upgrade_2_2_text">1 ур</div>
+                        <div class="item-level-text">1 ур</div>
                     </div>
                     <div class="item-content">
                         <div class="item-title">Обновленная майка</div>
@@ -1630,7 +1632,7 @@
                         <br>
                         <font id="upgrade_2_2_3"> + Выполнить задание "Пивной монстр!"</font>
                     </div>
-                    <div class="item-pay" id="upgrade_2_2_button" onclick="Upgrade_2_2()">
+                    <div class="item-pay">
                         <div class="item-pay-text">ПРОКАЧАТЬ</div>
                         <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
                     </div>
@@ -1641,7 +1643,7 @@
                 <div class="list-item">
                     <div class="item-number"></div>
                     <div class="item-level">
-                        <div class="item-level-text" id="upgrade_2_3_text">1 ур</div>
+                        <div class="item-level-text">1 ур</div>
                     </div>
                     <div class="item-content">
                         <div class="item-title">Старая машина</div>
@@ -1664,7 +1666,7 @@
                         <br>
                         <font id="upgrade_2_3_3"> + Выполнить задание "Пивной монстр!"</font>
                     </div>
-                    <div class="item-pay" id="upgrade_2_3_button" onclick="Upgrade_2_3()">
+                    <div class="item-pay">
                         <div class="item-pay-text">ПРОКАЧАТЬ</div>
                         <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
                     </div>
@@ -1675,7 +1677,7 @@
                 <div class="list-item">
                     <div class="item-number"></div>
                     <div class="item-level">
-                        <div class="item-level-text" id="upgrade_2_4_text">3 ур</div>
+                        <div class="item-level-text">3 ур</div>
                     </div>
                     <div class="item-content">
                         <div class="item-title">Металлический бак</div>
@@ -1698,7 +1700,7 @@
                         <br>
                         <font id="upgrade_2_4_3"> + Выполнить задание "Пивной монстр!"</font>
                     </div>
-                    <div class="item-pay" id="upgrade_2_4_button" onclick="Upgrade_2_4()">
+                    <div class="item-pay">
                         <div class="item-pay-text">ПРОКАЧАТЬ</div>
                         <!-- <img style="position: absolute; width: 25px; height: 25px; top: 2.5px; right: 12.5px;" src=".\images\telegram.png"> -->
                     </div>
@@ -1784,32 +1786,29 @@
     <!-- <img src=".\images\кнопка.png" width=1500 height=1500 style="margin-left: -0px; margin-top: 480px;"> -->
 </body>
 <script src="script.js"></script>
-<script src="./JS/upgrade.js"></script>
 <!-- <script src="https://telegram.org/js/telegram-web-app.js?61"></script> -->
 <script>
     CheckPlatform();
 
-    const tg = window.Telegram.WebApp;
-    const user = tg.initDataUnsafe?.user;
-    if (user && user.photo_url) {
-        document.getElementById("profile_img_img").src = user.photo_url
-        if (user.first_name) {
-            document.getElementById("lead_text").textContent = user.first_name
-        } else {
-            console.log("У пользователя данные недоступны");
-        }
-    } else {
-        console.log("У пользователя нет аватарки или данные недоступны");
-    }
+    // const tg = window.Telegram.WebApp;
+    // const user = tg.initDataUnsafe?.user;
+    // if (user && user.photo_url) {
+    //     document.getElementById("profile_img_img").src = user.photo_url
+    //     if (user.first_name) {
+    //         document.getElementById("lead_text").textContent = user.first_name
+    //     } else {
+    //         console.log("У пользователя данные недоступны");
+    //     }
+    // } else {
+    //     console.log("У пользователя нет аватарки или данные недоступны");
+    // }
 
-    tg.expand();
+    // tg.expand();
 
     // localStorage.clear()
     test_coin = Number(localStorage.getItem('test_coin'));
     tap = Number(localStorage.getItem('tap'));
     test_fish = Number(localStorage.getItem('test_fish'));
-
-    stage = Number(localStorage.getItem('stage')) || 1;
 
     tap_upgrade = Number(localStorage.getItem('tap_upgrade')) || 1;
     beer_in_hour_upgrade = Number(localStorage.getItem('beer_in_hour_upgrade')) || 1;
@@ -1821,56 +1820,9 @@
     document.getElementById("passive_balance").textContent = Number(beer_in_hour_upgrade)
 
     CheckTasks();
-    CheckStage();
-
     Check_Upgrade_1_1();
     Check_Upgrade_1_2();
     Check_Upgrade_1_3();
-
-    Check_Upgrade_2_1();
-    Check_Upgrade_2_2();
-    Check_Upgrade_2_3();
-    Check_Upgrade_2_4();
-
-    // CheckLevel();
-
-    function CheckStage(){
-        if(stage == 1){
-            document.getElementById("skuf").src = "./images/скуф1.png";
-            document.getElementById("house").style.backgroundImage = "url('./images/дом.png')";
-
-            document.getElementById("select-level-2-text").style = "text-decoration: line-through;";
-            document.getElementById("select-level-2").style = "pointer-events: none;";
-            document.getElementById("select-level-3-text").style = "text-decoration: line-through;";
-            document.getElementById("select-level-3").style = "pointer-events: none;";
-            document.getElementById("select-level-4-text").style = "text-decoration: line-through;";
-            document.getElementById("select-level-4").style = "pointer-events: none;";
-            document.getElementById("select-level-5-text").style = "text-decoration: line-through;";
-            document.getElementById("select-level-5").style = "pointer-events: none;";
-
-            SelectLevel('1');
-            SelectTask('1');
-        }
-        if(stage == 2){
-            document.getElementById("skuf").src = "./images/скуф2.png";
-            document.getElementById("house").style.backgroundImage = "url('./images/дом2.png')";
-
-            document.getElementById("select-level-2-text").style = "text-decoration: none;";
-            document.getElementById("select-level-2").style = "pointer-events: all;";
-            document.getElementById("select-level-3-text").style = "text-decoration: line-through;";
-            document.getElementById("select-level-3").style = "pointer-events: none;";
-            document.getElementById("select-level-4-text").style = "text-decoration: line-through;";
-            document.getElementById("select-level-4").style = "pointer-events: none;";
-            document.getElementById("select-level-5-text").style = "text-decoration: line-through;";
-            document.getElementById("select-level-5").style = "pointer-events: none;";
-
-            SelectLevel('2');
-            SelectTask('2');
-        }
-    }
-    
-
-
 
     plus = setInterval(() => {
         test_coin = test_coin + beer_in_hour_upgrade;
@@ -1885,7 +1837,7 @@
             // user.addToHomeScreen()
         } else {
             console.log('Компьютер');
-            window.location.href = "https://themksecond.github.io/skuf/PcPage/index.html";
+            // window.location.href = "https://themksecond.github.io/skuf/PcPage/index.html";
         }
     }
 
@@ -1901,18 +1853,8 @@
         document.getElementById("beer_balance").textContent = Number(test_coin);
         document.getElementById("tap_tap_progress").textContent = `Тапнуть по экрану ${Number(tap)} / 1000 раз.`
 
-        CheckTasks();
         Check_Upgrade_1_1();
-        Check_Upgrade_1_2();
-        Check_Upgrade_1_3();
 
-        Check_Upgrade_2_1();
-        Check_Upgrade_2_2();
-        Check_Upgrade_2_3();
-        Check_Upgrade_2_4();
-
-        CheckLevel();
-        CheckStage();
     }
 
     function ShowTasks() {
@@ -3960,8 +3902,7 @@
     }
 
     function CheckLevel() {
-        if(stage == 1){
-            if (Number(localStorage.getItem("1_2_level")) == 6 && Number(localStorage.getItem("1_1_level")) == 6 && Number(localStorage.getItem("1_3_level")) == 6) {
+        if (Number(localStorage.getItem("1_2_level")) == 6 && Number(localStorage.getItem("1_1_level")) == 6 && Number(localStorage.getItem("1_3_level")) == 6) {
             console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
             document.getElementById("upgrade").style.display = "none";
             document.getElementById("tasks").style.display = "none";
@@ -3969,37 +3910,7 @@
 
             document.getElementById("upgrade_stage_button").style.display = "block";
 
-            }
         }
-
-        if(stage == 2){
-            if (Number(localStorage.getItem("2_2_level")) == 6 && Number(localStorage.getItem("2_1_level")) == 6 && Number(localStorage.getItem("2_3_level")) == 6) {
-            console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-            document.getElementById("upgrade").style.display = "none";
-            document.getElementById("tasks").style.display = "none";
-            document.getElementById("spin").style.display = "none";
-
-            document.getElementById("upgrade_stage_button").style.display = "block";
-
-            }
-        }
-        
-    }
-
-    function UpgradeStage(){
-        stage++;
-        localStorage.setItem("stage", stage);
-
-        document.getElementById("skuf").src = "./images/скуф2.png";
-        document.getElementById("house").style.backgroundImage = "url('./images/дом2.png')";
-
-        console.log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-        document.getElementById("upgrade").style.display = "block";
-        document.getElementById("tasks").style.display = "block";
-        document.getElementById("spin").style.display = "block";
-
-        document.getElementById("upgrade_stage_button").style.display = "none";
-
     }
 
 </script>
