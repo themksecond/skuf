@@ -1789,20 +1789,20 @@
 <script>
     CheckPlatform();
 
-    const tg = window.Telegram.WebApp;
-    const user = tg.initDataUnsafe?.user;
-    if (user && user.photo_url) {
-        document.getElementById("profile_img_img").src = user.photo_url
-        if (user.first_name) {
-            document.getElementById("lead_text").textContent = user.first_name
-        } else {
-            console.log("У пользователя данные недоступны");
-        }
-    } else {
-        console.log("У пользователя нет аватарки или данные недоступны");
-    }
+    // const tg = window.Telegram.WebApp;
+    // const user = tg.initDataUnsafe?.user;
+    // if (user && user.photo_url) {
+    //     document.getElementById("profile_img_img").src = user.photo_url
+    //     if (user.first_name) {
+    //         document.getElementById("lead_text").textContent = user.first_name
+    //     } else {
+    //         console.log("У пользователя данные недоступны");
+    //     }
+    // } else {
+    //     console.log("У пользователя нет аватарки или данные недоступны");
+    // }
 
-    tg.expand();
+    // tg.expand();
 
     // localStorage.clear()
     test_coin = Number(localStorage.getItem('test_coin'));
